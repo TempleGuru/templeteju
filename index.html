@@ -183,6 +183,11 @@ span#moreClose {
   font-size: 25px;
   float: right;
 }
+span#tabTitle {
+    float: right;
+    font-size: 18px;
+    color: #F93;
+}
 
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -242,8 +247,10 @@ span#moreClose {
   </div>  <!-- End of More View-->
   <div id="calendarView" class="hide">
     <div id="tabContent" class="calendar show">
-      <span class="back bgTitleColor calendar"> < BACK </span>
+      <div id="backHeader">
+      <span class="back bgTitleColor calendar"> < BACK  <span id="tabTitle"> Calendar </span> </span>
       <span class="tabViewTitle month"> Calendar :  </span>
+    </div>
       <iframe id="calendariframe" title="Telugu Calendar" src="" width="640" height="480"></iframe>
       <!-- <span class="loadMore">Show More</span> -->
       <!-- allowfullscreen target="_parent" -->
@@ -256,8 +263,8 @@ span#moreClose {
   </div> <!-- End of Calendar View-->
   <div id="videoView" class="hide">
     <div id="tabContent" class="calendar show">
-      <span class="back bgTitleColor video"> < BACK </span>
-      <span class="tabViewTitle video"> Video : Bhagavad Gita </span>
+      <span class="back bgTitleColor video"> < BACK <span id="tabTitle"> Bhagavad Gita</span></span>
+      <span class="tabViewTitle video"> Bhagavad Gita </span>
       <iframe id="videoiframe" title="Telugu Video" src="" width="640" height="480" allowfullscreen></iframe>
       <!-- <span class="loadMore">Show More</span> -->
       <!-- allowfullscreen target="_parent" -->
@@ -301,7 +308,7 @@ span#moreClose {
      let currentVideoNumber = 0;
      let currentView = "home";
      //loadData(showVideo, "https://raw.githubusercontent.com/TempleGuru/templeteju/main/data1", "video");
-    tabViewTitleMonthElement.innerHTML = "Calendar: " + MONTHS[currentMonth] + "," + currentYear;
+    tabViewTitleMonthElement.innerHTML = MONTHS[currentMonth] + "," + currentYear;
     tabViewTitleVideoElement.innerHTML = "Video: Bhagavad Gita";
     
     // Processing videos
@@ -337,7 +344,10 @@ span#moreClose {
           videoNumber = 0;
       console.log("showVideo: " + videoNumber) ;
 
-      tabViewTitleVideoElement.innerHTML = "Video: Bhagavad Gita";
+      let tabTitleElement = document.querySelector("#videoView #tabTitle");
+      tabTitleElement.innerHTML = "Bhagavad Gita";
+
+      tabViewTitleVideoElement.innerHTML = "Chapter 1";
       let videoElement = document.querySelector("#videoiframe");
       let data = JSON.parse(localStorage.getItem("video"));
       videoElement.src = "https://www.youtube.com/embed/"+ JSON.parse(data).video[videoNumber];
@@ -349,16 +359,13 @@ span#moreClose {
           videoNumber = 0;
       console.log("showVideo: " + videoNumber) ;
       
+      let tabTitleElement = document.querySelector("#videoView #tabTitle");
+      tabTitleElement.innerHTML = "Live Darshan";
+
       let videoElement = document.querySelector("#videoiframe");
       let data = JSON.parse(localStorage.getItem("live"));
       tabViewTitleVideoElement.innerHTML = JSON.parse(data).live[videoNumber]["message"];
       videoElement.src = JSON.parse(data).live[videoNumber]["link"];
-      try{
-          
-      }catch(e){
-        alert("Dont play");
-        tabViewTitleVideoElement.innerHTML = '<a href="https://www.sai.org.in/en/sai-video-popup" target="_blank">Link Here if video dont play.</a>';
-      }
      }
     
     // Processing months
@@ -398,7 +405,7 @@ span#moreClose {
         month = currentMonth;
       }
       console.log("showCalendar: " + year +"  " +month);
-      tabViewTitleMonthElement.innerHTML = "Calendar: " + MONTHS[currentMonth] + "," + currentYear;
+      tabViewTitleMonthElement.innerHTML = MONTHS[currentMonth] + "," + currentYear;
       let calendarElement = document.querySelector("#calendariframe");
       let data = JSON.parse(localStorage.getItem("calendar"));
        calendarElement.src = JSON.parse(data).calendar[year-2020].months[month];
