@@ -1,0 +1,26 @@
+{
+  "live": [
+      { 
+        "link": "https://www.youtube.com/embed/qaGdIUmwHuw", 
+        "message":"Live: Shree Somnath Temple, First Jyotirlinga, Gujarat."
+      },
+      { 
+        "link": "https://www.youtube.com/embed/rFLh2ChE3WQ", 
+        "message":"Live: Siddhivinayak Temple, Mumbai"
+      },
+      { 
+        "link": "https://www.youtube.com/embed/_QC15t6OWmQ", 
+        "message":"Live:Peringottukara Devasthanam | Vishnumaya, Kerala"
+      },{ 
+        "link": "https://www.youtube.com/embed/WCsW3bI5z4U", 
+        "message":"Live:Shree Salangpur Hanuman,Gujarat"
+      },
+      { 
+        "link": "https://www.sai.org.in/en/sai-video-popup", 
+        "message":"Live: Sai Baba Darshan , Shirdi"},
+      { 
+        "link": "https://www.mahalaxmikolhapur.com/shri-ambabai-mahalaxmi-live-darshan.php", 
+        "message":"Live: Shri Mahalaxmi, Kolhapur,"
+      }
+  ]
+}
