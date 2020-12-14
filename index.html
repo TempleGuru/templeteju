@@ -300,7 +300,7 @@ span#moreClose {
      let currentYear = new Date().getFullYear();
      let currentVideoNumber = 0;
      let currentView = "home";
-     //loadData(showVideo, "https://raw.githubusercontent.com/TempleGuru/templeinfo/main/data1", "video");
+     //loadData(showVideo, "https://raw.githubusercontent.com/TempleGuru/templeteju/main/data1", "video");
     tabViewTitleMonthElement.innerHTML = "Calendar: " + MONTHS[currentMonth] + "," + currentYear;
     tabViewTitleVideoElement.innerHTML = "Video: Bhagavad Gita";
     
@@ -409,7 +409,7 @@ span#moreClose {
 
       if(localStorage.getItem(storageId) == null){
             let xhttp = new XMLHttpRequest();
-            //let calendarDataURL = "https://raw.githubusercontent.com/TempleGuru/templeinfo/main/data";
+            //let calendarDataURL = "https://raw.githubusercontent.com/TempleGuru/templeteju/main/data";
             xhttp.open("GET", url);
             xhttp.send();
             xhttp.onreadystatechange = function(){
@@ -458,7 +458,7 @@ span#moreClose {
       
     });
     gitaElement.addEventListener("click", function(event){
-      loadData(showVideo, "https://raw.githubusercontent.com/TempleGuru/templeinfo/main/data1", "video");
+      loadData(showVideo, "https://raw.githubusercontent.com/TempleGuru/templeteju/main/gita", "video");
       currentView = "gita";
       currentVideoNumber = 0;
       headerContainer.style.width = "0%";
@@ -472,7 +472,7 @@ span#moreClose {
       
     });
     liveDarshanElement.addEventListener("click", function(event){
-      loadData(showLiveDarshan, "https://raw.githubusercontent.com/TempleGuru/templeinfo/main/live", "live");
+      loadData(showLiveDarshan, "https://raw.githubusercontent.com/TempleGuru/templeteju/main/live", "live");
       currentView = "live";
       currentVideoNumber = 0 ;
       headerContainer.style.width = "0%";
@@ -489,7 +489,7 @@ span#moreClose {
 
 
     calendarElement.addEventListener("click", function(event){
-      loadData(showCalendar, "https://raw.githubusercontent.com/TempleGuru/templeinfo/main/data", "calendar");
+      loadData(showCalendar, "https://raw.githubusercontent.com/TempleGuru/templeteju/main/calendar", "calendar");
       currentView = "calendar";
       currentVideoNumber = 0 ;
       headerContainer.style.width = "0%";
