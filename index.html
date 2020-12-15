@@ -531,6 +531,7 @@ span#tabTitle {
     backVideoElement.addEventListener("click", function(event){
       currentView = "home";
       currentVideoNumber = 0 ;
+      document.querySelector("#videoiframe").src="";
       //headerContainer.style.width = "0%";
       console.log("backElement :click");
       templeViewElement.classList.remove('hide');
