@@ -21,6 +21,7 @@
     iframe {
     width: 100%;
     border-radius: 46px;
+
 }
 .title span {
     display: block;
@@ -195,7 +196,7 @@ span#tabTitle {
 
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self'">
+
 </head>
 <body>
   
@@ -286,19 +287,6 @@ span#tabTitle {
           <!-- <span class="saffron">&#9728;</span> -->
           <span class="menu"></span>
         </div>
-
-          <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/J8gKJ_OKN6Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div id="basicInfo">
-            <span class="title"> Sri Venkateswara Swami Temple, Tirupati</span> 
-            <span class="moreThreeDots"></span>
-            <!-- <i class="arrow down"></i> -->
-            <span> 1800 425 4141 / 0877 227 7777 </span>
-            <span> https://www.tirumala.org/</span>
-            <div class="more hide"></div>
-          </div>
-        
   </div>
   <script>
 
@@ -311,7 +299,8 @@ span#tabTitle {
      let currentYear = new Date().getFullYear();
      let currentVideoNumber = 0;
      let currentView = "home";
-     //loadData(showVideo, "https://raw.githubusercontent.com/TempleGuru/templeteju/main/data1", "video");
+     let currentTempleId = 0;
+    loadData(showTemples, "https://raw.githubusercontent.com/TempleGuru/templeteju/main/temples", "temples");
     tabViewTitleMonthElement.innerHTML = MONTHS[currentMonth] + "," + currentYear;
     tabViewTitleVideoElement.innerHTML = "Video: Bhagavad Gita";
     
@@ -341,7 +330,29 @@ span#tabTitle {
       showLiveDarshan(currentVideoNumber);
 
     });
-    
+    function showTemples(){
+      let templesArray = JSON.parse(JSON.parse(localStorage.getItem("temples"))).temples;
+      let templeViewElement = document.querySelector("#templeView");
+      let templeHTML = "";
+      for(let i=0; i<templesArray.length; i++){
+          templeHTML +=`  
+              <div class="video">
+              <iframe src= ${templesArray[i].videolink} width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div id="basicInfo">
+                <span class="title"> ${templesArray[i].templename} , ${templesArray[0].location} </span> 
+                <span class="moreThreeDots" data-templeid=${templesArray[i].id}></span>
+                <span> ${templesArray[i].contacts} </span>
+                <span> ${templesArray[i].website} </span>
+                <div class="more hide"></div>
+              </div>`;
+      } 
+          templeViewElement.insertAdjacentHTML('beforeend',templeHTML) ;
+          addMoreEvent();
+
+
+      
+    }
     
     function showVideo(videoNumber){
       if(videoNumber == undefined) 
@@ -418,7 +429,7 @@ span#tabTitle {
     function loadData(callback,url,storageId){
       console.log("loadData: " + callback  + " " + url +" " + storageId);
 
-      if(localStorage.getItem(storageId) == null){
+      if(localStorage.getItem(storageId) == null){  
             let xhttp = new XMLHttpRequest();
             //let calendarDataURL = "https://raw.githubusercontent.com/TempleGuru/templeteju/main/data";
             xhttp.open("GET", url);
@@ -569,39 +580,47 @@ span#tabTitle {
         
       }
     });
-    
-    
-    
+    function showTempleMore(){
+      let moreViewElement = document.querySelector("#moreView");
+      let templePDFElement = document.querySelector("#templePDF");
+
+      currentTempleId = currentTempleId || -1;
+      moreViewElement.style.height = "100%";
+
+      //let videoElement = document.querySelector("#videoiframe");
+      let data = JSON.parse(JSON.parse(localStorage.getItem(currentTempleId)));
+      //videoElement.src = "https://www.youtube.com/embed/"+ JSON.parse(data).video[videoNumber];
+
+     // if(templePDFElement.src == "")
+          templePDFElement.src= data.about;
+    }
+
+    function addMoreEvent(pdfSrc){
+      console.log("AddMoreEvent");
     // Moving the arrow up and down when clicks on it.
-    let contentArrow = document.querySelector(".moreThreeDots");
-    let moreElement = document.querySelector(".more");
-    let moreViewElement = document.querySelector("#moreView");
-    let templePDFElement = document.querySelector("#templePDF");
-    
-    contentArrow.addEventListener("click", function(event){
-        
-        moreViewElement.style.height = "100%";
-        if(templePDFElement.src == "")
-        templePDFElement.src= "https://drive.google.com/file/d/18WsjDqxtMrERT9k7_LpxBIN2qYdyaApI/preview";
-      // if(contentArrow.classList.contains('down')){
-      //   contentArrow.classList.remove('down');
-      //   contentArrow.classList.add('up');
-      //   moreElement.classList.remove('hide');
-      //   moreElement.classList.add('show');
+            let contentArrow = document.querySelector("#templeView");
+            let moreElement = document.querySelector(".more");
+            let moreViewElement = document.querySelector("#moreView");
+            
+            templePDFSrc = pdfSrc || "";
+            
+            contentArrow.addEventListener("click", function(event){
+              if(currentTempleId == -1)
+              
+              if(!event.target.classList.contains("moreThreeDots")) return false;
+                currentTempleId  = event.target.dataset.templeid || -1 ;
+                console.log("TEMPLE ID " + currentTempleId );
 
-      // }else{
-      //   contentArrow.classList.remove('up');
-      //   contentArrow.classList.add('down');
-      //   moreElement.classList.remove('show');
-      //   moreElement.classList.add('hide');
-      // }
-    });
-    let morecloseElement =  document.querySelector("#moreClose");
-    morecloseElement.addEventListener("click", function(event){
-      console.log('more close');
-      moreViewElement.style.height = "0%";
-    });
-
+                loadData( showTempleMore, "https://raw.githubusercontent.com/TempleGuru/templeteju/main/templeById/"+currentTempleId , currentTempleId );
+                
+               
+            });
+            let morecloseElement =  document.querySelector("#moreClose");
+            morecloseElement.addEventListener("click", function(event){
+              console.log('more close');
+              moreViewElement.style.height = "0%";
+            });
+    }
 // Tabs click
 
     let tabElement = document.querySelector(".tabs");
