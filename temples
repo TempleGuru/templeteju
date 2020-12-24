@@ -10,6 +10,15 @@
       "videolink": "https://www.youtube.com/embed/1VOfUma4CCg", 
       "website": "http://www.dwarakatirumala.org/home.html", 
       "contacts": "+91 8829 271436, +91 8829 271469"
+    },
+    { 
+      "id" : "4", 
+      "templename" : "Sri Lakshmi Narasimha Swamy Temple", 
+      "location": "Antarvedi", 
+      "videolink": "https://www.youtube.com/embed/HDD_y5jIxto", 
+      "website": "https://www.antarvedisrilakshminarasimhaswamy.com/index.php", 
+      "contacts": "+91 8862 259313"
     }
+
   ]
 }
