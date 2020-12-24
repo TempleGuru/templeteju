@@ -26,6 +26,14 @@
       "videolink": "https://www.youtube.com/embed/8I7gm4rEalM", 
       "website": "https://tms.ap.gov.in/KRLPKL/cnt/index", 
       "contacts": "+91 9974564654"
+    },
+    { 
+      "id" : "6", 
+      "templename" : "Sri  Veera Venkata Satyanarayana Swamy Temple", 
+      "location": "Annavaram", 
+      "videolink": "https://www.youtube.com/embed/EXo7J4QyHwo", 
+      "website": "http://annavaramdevasthanam.nic.in/", 
+      "contacts": "08868-238121,238125,238163"
     }
 
   ]
