@@ -3,6 +3,13 @@
   [
     { "id" : "1", "templename" : "Sri Venkateswara Swamy Temple", "location": "Tirumala", "videolink": "https://www.youtube.com/embed/J8gKJ_OKN6Y", "website": " https://www.tirumala.org/", "contacts": "1800 425 4141, 0877 227 7777" },
     { "id" : "2", "templename" : "Andhra Shirdi Sainath Temple", "location": "East Godavari District", "videolink": "https://www.youtube.com/embed/jK4nFJx9rRI", "website": " http://www.andhrashirdi.org/", "contacts": "98496 66377,  08857 - 236114" },
-    { "id" : "3", "templename" : "Sri Venkateswara Swamy Temple", "location": "Tirumala", "videolink": "", "website": " https://www.tirumala.org/", "contacts": "1800 425 4141, 0877 227 7777" }
+    { 
+      "id" : "3", 
+      "templename" : "Sri Venkateswara Swamy Temple", 
+      "location": "Dwaraka Tirumala", 
+      "videolink": "https://www.youtube.com/embed/1VOfUma4CCg", 
+      "website": "http://www.dwarakatirumala.org/home.html", 
+      "contacts": "+91 8829 271436, 	+91 8829 271469"
+     }
   ]
 }
