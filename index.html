@@ -193,6 +193,9 @@ span#tabTitle {
     font-size: 18px;
     color: #F93;
 }
+a.website{
+  word-break: break-word;
+}
 
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -344,7 +347,7 @@ span#tabTitle {
                 <span class="title"> ${templesArray[i].templename} , ${templesArray[i].location} </span> 
                 <span class="moreThreeDots" data-templeid=${templesArray[i].id}></span>
                 <span> ${templesArray[i].contacts} </span>
-                <span><a href=${templesArray[i].website} target="_blank"> ${templesArray[i].website} <a> </span>
+                <span><a class="website" href=${templesArray[i].website} target="_blank"> ${templesArray[i].website} <a> </span>
                 <div class="more hide"></div>
               </div>`;
       } 
