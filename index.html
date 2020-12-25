@@ -196,6 +196,9 @@ span#tabTitle {
 a.website{
   word-break: break-word;
 }
+span.contacts{
+  display: block;
+}
 
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -209,7 +212,7 @@ a.website{
     <span class="home titleColor"> Home </span>  
     <span class="gita titleColor">  Bhagavad Gita </span>
     <span class="liveDarshan titleColor">  Live Darshan </span>
-    <span class="audio titleColor"> Audio </span>
+    <span class="audios titleColor"> Audios </span>
     <span class="books titleColor"> Books </span>
     <span class="calendar titleColor"> Calendar </span>
     <span class="contactus titleColor"> Contact Us </span>
@@ -307,13 +310,16 @@ a.website{
     tabViewTitleMonthElement.innerHTML = MONTHS[currentMonth] + "," + currentYear;
     tabViewTitleVideoElement.innerHTML = "Video: Bhagavad Gita";
     
-    // Processing videos
+    // Processing videos/audios
     let nextVideoElement = document.querySelector(".nextVideo");
     nextVideoElement.addEventListener("click", function(event){
       if(currentView == "gita")
       showVideo(++currentVideoNumber);
       else if(currentView == "live")
       showLiveDarshan(++currentVideoNumber);
+      else if(currentView == "audios")
+      showAudios(++currentVideoNumber);
+      
     });
     let prevVideoElement = document.querySelector(".prevVideo");
     prevVideoElement.addEventListener("click", function(event){
@@ -322,6 +328,9 @@ a.website{
       showVideo(--urrentVideoNumber);
       else if(currentView == "live")
       showLiveDarshan(--currentVideoNumber);
+      else if(currentView == "audios")
+      showAudios(--currentVideoNumber);
+      
 
     });
     let homeVideoElement = document.querySelector(".homeVideo");
@@ -331,6 +340,8 @@ a.website{
       showVideo(currentVideoNumber);
       else if(currentView == "live")
       showLiveDarshan(currentVideoNumber);
+      else if(currentView == "audios")
+      showAudios(currentVideoNumber);
 
     });
     function showTemples(){
@@ -346,16 +357,13 @@ a.website{
               <div id="basicInfo">
                 <span class="title"> ${templesArray[i].templename} , ${templesArray[i].location} </span> 
                 <span class="moreThreeDots" data-templeid=${templesArray[i].id}></span>
-                <span> ${templesArray[i].contacts} </span>
+                <span class="contacts"> ${templesArray[i].contacts} </span>
                 <span><a class="website" href=${templesArray[i].website} target="_blank"> ${templesArray[i].website} <a> </span>
                 <div class="more hide"></div>
               </div>`;
       } 
           templeViewElement.insertAdjacentHTML('beforeend',templeHTML) ;
           addMoreEvent();
-
-
-      
     }
     
     function showVideo(videoNumber){
@@ -416,7 +424,21 @@ a.website{
       showCalendar(currentYear,currentMonth);
 
     });
-    
+    function showAudios(audioNumber){
+      if(audioNumber == undefined) 
+      audioNumber = 0;
+      console.log("audioNumber: " + audioNumber) ;
+
+      let tabTitleElement = document.querySelector("#videoView #tabTitle");
+      tabTitleElement.innerHTML = "Audios";
+
+     
+      let videoElement = document.querySelector("#videoiframe");
+      let data = JSON.parse(localStorage.getItem("audios"));
+      videoElement.src = JSON.parse(data).audios[audioNumber].audioLink;
+      tabViewTitleVideoElement.innerHTML = JSON.parse(data).audios[audioNumber].message;
+       
+    }
     
     function showCalendar(year,month){
       if(year == undefined && month == undefined){
@@ -460,6 +482,7 @@ a.website{
     //Menu- Container Views Change 
     let homeElement = document.querySelector(".home");
     let gitaElement = document.querySelector(".gita");
+    let audiosElement = document.querySelector(".audios");
     let liveDarshanElement = document.querySelector(".liveDarshan");
     let calendarElement = document.querySelector(".calendar");
     
@@ -512,7 +535,19 @@ a.website{
 
       
     });
+    audiosElement.addEventListener("click", function(event){
+      loadData(showAudios, "https://raw.githubusercontent.com/TempleGuru/templeteju/main/audios", "audios");
+      currentView = "audios";
+      currentVideoNumber = 0;
+      headerContainer.style.width = "0%";
+      templeViewElement.classList.remove('show');
+      templeViewElement.classList.add('hide');
+      videoViewElement.classList.remove('hide');
+      videoViewElement.classList.add('show');
+      calendarViewElement.classList.remove('show');
+      calendarViewElement.classList.add('hide');
 
+    });
 
     calendarElement.addEventListener("click", function(event){
       loadData(showCalendar, "https://raw.githubusercontent.com/TempleGuru/templeteju/main/calendar", "calendar");
