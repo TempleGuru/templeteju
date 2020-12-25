@@ -1,40 +1,844 @@
-{
-  "temples" : 
-  [
-    { "id" : "1", "templename" : "Sri Venkateswara Swamy Temple", "location": "Tirumala", "videolink": "https://www.youtube.com/embed/J8gKJ_OKN6Y", "website": " https://www.tirumala.org/", "contacts": "1800 425 4141, 0877 227 7777" },
-    { "id" : "2", "templename" : "Andhra Shirdi Sainath Temple", "location": "East Godavari District", "videolink": "https://www.youtube.com/embed/jK4nFJx9rRI", "website": " http://www.andhrashirdi.org/", "contacts": "98496 66377,  08857 - 236114" },
-    { 
-      "id" : "3", 
-      "templename" : "Sri Venkateswara Swamy Temple", 
-      "location": "Dwaraka Tirumala", 
-      "videolink": "https://www.youtube.com/embed/1VOfUma4CCg", 
-      "website": "http://www.dwarakatirumala.org/home.html", 
-      "contacts": "+91 8829 271436, +91 8829 271469"
-    },
-    { 
-      "id" : "4", 
-      "templename" : "Sri Lakshmi Narasimha Swamy Temple", 
-      "location": "Antarvedi", 
-      "videolink": "https://www.youtube.com/embed/HDD_y5jIxto", 
-      "website": "https://www.antarvedisrilakshminarasimhaswamy.com/index.php", 
-      "contacts": "+91 8862 259313"
-    },
-    { 
-      "id" : "5", 
-      "templename" : "Sri  Ksheera Ramalingeswara Swamy Temple", 
-      "location": "Palakollu", 
-      "videolink": "https://www.youtube.com/embed/8I7gm4rEalM", 
-      "website": "https://tms.ap.gov.in/KRLPKL/cnt/index", 
-      "contacts": "+91 9974564654"
-    },
-    { 
-      "id" : "6", 
-      "templename" : "Sri  Veera Venkata Satyanarayana Swamy Temple", 
-      "location": "Annavaram", 
-      "videolink": "https://www.youtube.com/embed/EXo7J4QyHwo", 
-      "website": "http://annavaramdevasthanam.nic.in/", 
-      "contacts": "08868-238121,238125,238163"
+<head>
+  <title> TempleGuru.in </title>
+  <style>
+    div#header{
+      font-size: 24px;
+      margin: 12px 0px;
+    }
+    .title{
+      font-weight: bold;
+    }
+    div#container {
+    margin: 0 2%;
+    width: 96%;
+}
+    div#templeView {
+      text-align: left;
+}
+#moreOption span {
+    padding: 0px 10px;
+}
+    iframe {
+    width: 100%;
+    border-radius: 46px;
+
+}
+.title span {
+    display: block;
+    float: left;
+}
+div#basicInfo {
+    /* display: inline; */
+    padding-bottom: 21px;
+}
+.saffron{
+  color: #FF9933;
+}
+.titleColor{
+  color: #1497b5;
+}
+.bgTitleColor{
+  background-color: #1497b5 !important;
+}
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-top: 6px;
+}
+i.arrow {
+    float: right;
+}
+#contentArrow{
+  margin-top: 6px;
+  display: inline;
+  float: right;
+}
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
+.tabs {
+    margin-top: 12px;
+    width: 111%;
+}
+.tabs .tab, #tabContent .back,
+#months .prevMonth, #months .nextMonth,
+#videos .prevVideo, #videos .nextVideo {
+    background-color: #FF9933;
+    /* color: blue; */
+    border-radius: 7px;
+    padding: 5px;
+}
+#tabContent{
+  margin-top: 10px;
+}
+
+div#tabContent.pdf iframe {
+    height: 500px;
+    width: 100%;
+}
+div#tabContent.audio iframe {
+    width: 100%;
+    height: auto;
+}
+.loadMore{
+  text-align: center; 
+  color: #FF9933;
+  display: block;
+}
+div#tabContent.booking span {
+    display: block;
+    padding: 3px;
+}
+.menu:after {
+    content: '\2261';
+    font-size: 40px;
+    line-height: 40px;
+    float: right;
+    margin-right: 10px;
     }
 
-  ]
+.close:after {
+    content: '\2573';
+    font-size: 28px;
+    line-height: 28px;
+    float: left;
+    
+    }
+
+#headerContainer span {
+    display: block;
+    text-align: center;
+    padding: 15px;
 }
+#headerContainer span:hover , .moreThreeDots:hover, .menu:hover, #moreClose:hover, .back:hover {
+    color: #F93;
+}
+div#headerContainer, div#moreView {
+    -webkit-transition: all 2s ease;  
+    -moz-transition: all 2s ease;  
+    -o-transition: all 2s ease;  
+    -ms-transition: all 2s ease;  
+    transition: all 0.5s ease;
+
+}
+#headerContainer{
+    background-color: rgba(ff, 99, 33, 0.9);
+    background-color: white;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100% ;
+    width: 0%;
+    z-index: 10;
+
+}
+span.tabViewTitle {
+  white-space: nowrap;
+    font-size: 24px;
+    display: block;
+    text-align: center;
+    color: 1497b5;
+    padding: 10px;
+    width: 96%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+div#months,div#videos {
+    text-align: center;
+    margin: 21px;
+}
+span.currentMonth {
+    text-decoration: underline;
+    padding: 0 21px;
+}
+
+div#moreView {
+    position: fixed;
+    background: white;
+    width: 100%;
+    height: 0;
+    display: block;
+    z-index: 99999;
+    bottom: 0;
+    left: 0;
+    border-top: 2px solid #F93;
+    border-radius: 22px 22px 0 0;
+}
+span#moreClose {
+    float: right;
+    padding: 10px;
+}
+.moreThreeDots:after{
+  content: '\2807';
+  font-size: 25px;
+  float: right;
+}
+span#tabTitle {
+    float: right;
+    font-size: 18px;
+    color: #F93;
+}
+a.website{
+  word-break: break-word;
+}
+
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+  
+  <div id="headerContainer" class="">
+    <span class="close"></span>
+    <span> &nbsp;</span>
+    <span class="home titleColor"> Home </span>  
+    <span class="gita titleColor">  Bhagavad Gita </span>
+    <span class="liveDarshan titleColor">  Live Darshan </span>
+    <span class="audio titleColor"> Audio </span>
+    <span class="books titleColor"> Books </span>
+    <span class="calendar titleColor"> Calendar </span>
+    <span class="contactus titleColor"> Contact Us </span>
+  </div> 
+  <div id="moreView" class="show">
+    <div id="tabContent" class="more show">
+      <span id="moreClose" class="close bgColor more"></span>
+      <span class="tabViewTitle more"> Title:  Sri Venkateswara Swami Temple, Tirupati </span>
+      <div id="moreContent">
+        <div class="more show">
+          <div class="tabs">
+              <span class="pdfTab tab bgTitleColor">About</span>
+              <span class="mapTab tab">Map</span>
+              <span class="bookingTab tab">Darshan tickets</span>
+              <span class="audioTab tab">Audio</span>
+              <span class="booksTab tab">Book</span>
+          </div>
+          <div id="tabContent" class="pdf show">
+            <iframe id="templePDF"  width="640" height="480"></iframe>
+          </div>
+          <div id="tabContent" class="audio hide">
+            <iframe id="templeAudio"  width="640" height="480"></iframe>
+          </div>
+          <div id="tabContent" class="booking hide">
+            <span>Darshan tickets and Accomodation:</span>
+            <span>https://tirupatibalaji.ap.gov.in/</span>
+            <span>Official Site:</span>
+            <span>https://www.tirumala.org/</span>
+            <span>Helpline numbers:</span>
+            <span>1800 425 4141 </span>
+            <span>0877 227 7777 </span>
+          </div>
+          <div id="tabContent" class="map hide">
+                <iframe id="templeMap"  width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+          <div id="tabContent" class="books hide">
+              <iframe id="templeBooks"  width="640" height="480"></iframe>
+          </div>
+          
+        </div> 
+      </div>
+    </div>
+  </div>  <!-- End of More View-->
+  <div id="calendarView" class="hide">
+    <div id="tabContent" class="calendar show">
+      <div id="backHeader">
+      <span class="back bgTitleColor calendar"> < BACK  <span id="tabTitle"> Calendar </span> </span>
+      <span class="tabViewTitle month"> Calendar :  </span>
+    </div>
+      <iframe id="calendariframe" title="Telugu Calendar" src="" width="640" height="480"></iframe>
+      <!-- <span class="loadMore">Show More</span> -->
+      <!-- allowfullscreen target="_parent" -->
+      <div  id="months">
+        <span class="prevMonth"><<</span>&nbsp;&nbsp;&nbsp; 
+        <span class="currentMonth"> Present</span>&nbsp;&nbsp;&nbsp;
+        <span class="nextMonth">>></span>
+      </div>
+    </div>
+  </div> <!-- End of Calendar View-->
+  <div id="videoView" class="hide">
+    <div id="tabContent" class="calendar show">
+      <span class="back bgTitleColor video"> < BACK <span id="tabTitle"> Bhagavad Gita</span></span>
+      <span class="tabViewTitle video"> Bhagavad Gita </span>
+      <iframe id="videoiframe" title="Telugu Video" src="" width="640" height="480" allowfullscreen></iframe>
+      <!-- <span class="loadMore">Show More</span> -->
+      <!-- allowfullscreen target="_parent" -->
+      <div  id="videos">
+        <span class="prevVideo"> << </span>&nbsp;&nbsp;&nbsp; 
+        <span class="homeVideo"> Home</span>&nbsp;&nbsp;&nbsp;
+        <span class="nextVideo"> >> </span>
+      </div>
+    </div>
+  </div> <!-- End of Video View-->
+  <div id="templeView" class="show">
+        <div id="header">
+          <span class="saffron">&#9784;</span> 
+          <span class="title titleColor">TempleGuru</span>
+          <!-- <span class="saffron">&#9728;</span> -->
+          <span class="menu"></span>
+        </div>
+  </div>
+  <script>
+
+     let tabViewTitleMonthElement = document.querySelector(".tabViewTitle.month");
+     let tabViewTitleVideoElement = document.querySelector(".tabViewTitle.video");
+     let MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+     localStorage.clear();
+    
+     let currentMonth = new Date().getMonth();
+     let currentYear = new Date().getFullYear();
+     let currentVideoNumber = 0;
+     let currentView = "home";
+     let currentTempleId = 0;
+    loadData(showTemples, "https://raw.githubusercontent.com/TempleGuru/templeteju/main/temples", "temples");
+    tabViewTitleMonthElement.innerHTML = MONTHS[currentMonth] + "," + currentYear;
+    tabViewTitleVideoElement.innerHTML = "Video: Bhagavad Gita";
+    
+    // Processing videos
+    let nextVideoElement = document.querySelector(".nextVideo");
+    nextVideoElement.addEventListener("click", function(event){
+      if(currentView == "gita")
+      showVideo(++currentVideoNumber);
+      else if(currentView == "live")
+      showLiveDarshan(++currentVideoNumber);
+    });
+    let prevVideoElement = document.querySelector(".prevVideo");
+    prevVideoElement.addEventListener("click", function(event){
+      
+      if(currentView == "gita")
+      showVideo(--urrentVideoNumber);
+      else if(currentView == "live")
+      showLiveDarshan(--currentVideoNumber);
+
+    });
+    let homeVideoElement = document.querySelector(".homeVideo");
+    homeVideoElement.addEventListener("click", function(event){
+      currentVideoNumber = 0;
+      if(currentView == "gita")
+      showVideo(currentVideoNumber);
+      else if(currentView == "live")
+      showLiveDarshan(currentVideoNumber);
+
+    });
+    function showTemples(){
+      let templesArray = JSON.parse(JSON.parse(localStorage.getItem("temples"))).temples;
+      let templeViewElement = document.querySelector("#templeView");
+      let templeHTML = "";
+      // jatin's video ---> let src = "https://www.youtube.com/embed/kBr49VhLa-g";
+      for(let i=0; i<templesArray.length; i++){
+          templeHTML +=`  
+              <div class="video">
+              <iframe src= ${templesArray[i].videolink} width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div id="basicInfo">
+                <span class="title"> ${templesArray[i].templename} , ${templesArray[i].location} </span> 
+                <span class="moreThreeDots" data-templeid=${templesArray[i].id}></span>
+                <span> ${templesArray[i].contacts} </span>
+                <span><a class="website" href=${templesArray[i].website} target="_blank"> ${templesArray[i].website} <a> </span>
+                <div class="more hide"></div>
+              </div>`;
+      } 
+          templeViewElement.insertAdjacentHTML('beforeend',templeHTML) ;
+          addMoreEvent();
+
+
+      
+    }
+    
+    function showVideo(videoNumber){
+      if(videoNumber == undefined) 
+          videoNumber = 0;
+      console.log("showVideo: " + videoNumber) ;
+
+      let tabTitleElement = document.querySelector("#videoView #tabTitle");
+      tabTitleElement.innerHTML = "Bhagavad Gita";
+
+      tabViewTitleVideoElement.innerHTML = "Chapter 1";
+      let videoElement = document.querySelector("#videoiframe");
+      let data = JSON.parse(localStorage.getItem("video"));
+      videoElement.src = "https://www.youtube.com/embed/"+ JSON.parse(data).video[videoNumber];
+       
+    }
+
+    function showLiveDarshan(videoNumber){
+      if(videoNumber == undefined) 
+          videoNumber = 0;
+      console.log("showVideo: " + videoNumber) ;
+      
+      let tabTitleElement = document.querySelector("#videoView #tabTitle");
+      tabTitleElement.innerHTML = "Live Darshan";
+
+      let videoElement = document.querySelector("#videoiframe");
+      let data = JSON.parse(localStorage.getItem("live"));
+      tabViewTitleVideoElement.innerHTML = JSON.parse(data).live[videoNumber]["message"];
+      videoElement.src = JSON.parse(data).live[videoNumber]["link"];
+     }
+    
+    // Processing months
+    let nextMonthElement = document.querySelector(".nextMonth");
+    nextMonthElement.addEventListener("click", function(event){
+      currentMonth = currentMonth + 1;
+      if(currentMonth >= 12){
+        currentMonth = 0;
+        ++currentYear;
+      }
+
+      showCalendar(currentYear,currentMonth);
+
+    });
+    let prevMonthElement = document.querySelector(".prevMonth");
+    prevMonthElement.addEventListener("click", function(event){
+      currentMonth = currentMonth - 1;
+      if(currentMonth < 0){
+        currentMonth = 11;
+        --currentYear;
+      }
+      showCalendar(currentYear,currentMonth);
+
+    });
+    let curMonthElement = document.querySelector(".currentMonth");
+    curMonthElement.addEventListener("click", function(event){
+      currentMonth = new Date().getMonth();
+      currentYear = new Date().getFullYear();
+      showCalendar(currentYear,currentMonth);
+
+    });
+    
+    
+    function showCalendar(year,month){
+      if(year == undefined && month == undefined){
+        year = currentYear;
+        month = currentMonth;
+      }
+      console.log("showCalendar: " + year +"  " +month);
+      tabViewTitleMonthElement.innerHTML = MONTHS[currentMonth] + "," + currentYear;
+      let calendarElement = document.querySelector("#calendariframe");
+      let data = JSON.parse(localStorage.getItem("calendar"));
+       calendarElement.src = JSON.parse(data).calendar[year-2020].months[month];
+    }
+
+    function loadData(callback,url,storageId){
+      console.log("loadData: " + callback  + " " + url +" " + storageId);
+
+      if(localStorage.getItem(storageId) == null){  
+            let xhttp = new XMLHttpRequest();
+            //let calendarDataURL = "https://raw.githubusercontent.com/TempleGuru/templeteju/main/data";
+            xhttp.open("GET", url);
+            xhttp.send();
+            xhttp.onreadystatechange = function(){
+              let response;
+              if (this.readyState == 4 && this.status == 200){
+                response = xhttp.responseText;
+                localStorage.setItem(storageId, JSON.stringify(response));
+                //showCalendar(currentYear,currentMonth);
+                if(callback)
+                  callback();
+              }
+            }
+          }else{
+            //showCalendar(currentYear,currentMonth);
+            if(callback)
+              callback();
+          }   
+          
+
+    }
+
+    //Menu- Container Views Change 
+    let homeElement = document.querySelector(".home");
+    let gitaElement = document.querySelector(".gita");
+    let liveDarshanElement = document.querySelector(".liveDarshan");
+    let calendarElement = document.querySelector(".calendar");
+    
+    let templeViewElement = document.querySelector("#templeView");
+    let videoViewElement  = document.querySelector("#videoView");
+    let calendarViewElement = document.querySelector("#calendarView");
+
+    let backVideoElement = document.querySelector(".back.video");
+    let backCalendarElement = document.querySelector(".back.calendar");
+
+    
+    homeElement.addEventListener("click", function(event){
+      currentView = "home";
+      headerContainer.style.width = "0%";
+      templeViewElement.classList.remove('hide');
+      templeViewElement.classList.add('show');
+      videoViewElement.classList.remove('show');
+      videoViewElement.classList.add('hide');
+      calendarViewElement.classList.remove('show');
+      calendarViewElement.classList.add('hide');
+
+      
+    });
+    gitaElement.addEventListener("click", function(event){
+      loadData(showVideo, "https://raw.githubusercontent.com/TempleGuru/templeteju/main/gita", "video");
+      currentView = "gita";
+      currentVideoNumber = 0;
+      headerContainer.style.width = "0%";
+      templeViewElement.classList.remove('show');
+      templeViewElement.classList.add('hide');
+      videoViewElement.classList.remove('hide');
+      videoViewElement.classList.add('show');
+      calendarViewElement.classList.remove('show');
+      calendarViewElement.classList.add('hide');
+
+      
+    });
+    liveDarshanElement.addEventListener("click", function(event){
+      loadData(showLiveDarshan, "https://raw.githubusercontent.com/TempleGuru/templeteju/main/live", "live");
+      currentView = "live";
+      currentVideoNumber = 0 ;
+      headerContainer.style.width = "0%";
+      templeViewElement.classList.remove('show');
+      templeViewElement.classList.add('hide');
+      videoViewElement.classList.remove('hide');
+      videoViewElement.classList.add('show');
+      calendarViewElement.classList.remove('show');
+      calendarViewElement.classList.add('hide');
+      
+
+      
+    });
+
+
+    calendarElement.addEventListener("click", function(event){
+      loadData(showCalendar, "https://raw.githubusercontent.com/TempleGuru/templeteju/main/calendar", "calendar");
+      currentView = "calendar";
+      currentVideoNumber = 0 ;
+      headerContainer.style.width = "0%";
+      templeViewElement.classList.remove('show');
+      templeViewElement.classList.add('hide');
+      videoViewElement.classList.remove('show');
+      videoViewElement.classList.add('hide');
+      calendarViewElement.classList.remove('hide');
+      calendarViewElement.classList.add('show');
+
+      
+    });
+    
+    backCalendarElement.addEventListener("click", function(event){
+      currentView = "home";
+      currentVideoNumber = 0;
+      //headerContainer.style.width = "0%";
+      console.log("backElement :click");
+      templeViewElement.classList.remove('hide');
+      templeViewElement.classList.add('show');
+      videoViewElement.classList.remove('show');
+      videoViewElement.classList.add('hide');
+      calendarViewElement.classList.remove('show');
+      calendarViewElement.classList.add('hide');
+      
+    });
+
+    backVideoElement.addEventListener("click", function(event){
+      currentView = "home";
+      currentVideoNumber = 0 ;
+      document.querySelector("#videoiframe").src="";
+      //headerContainer.style.width = "0%";
+      console.log("backElement :click");
+      templeViewElement.classList.remove('hide');
+      templeViewElement.classList.add('show');
+      videoViewElement.classList.remove('show');
+      videoViewElement.classList.add('hide');
+      calendarViewElement.classList.remove('show');
+      calendarViewElement.classList.add('hide');
+      
+    });
+
+    //Menu Clicking - Show / Hide Menu list
+    let menuElement = document.querySelector(".menu");
+    let listingElement = document.querySelector(".listing");
+    
+    let headerContainer = document.querySelector("#headerContainer");
+    headerContainer.style.width = "0%";
+    menuElement.addEventListener("click", function(event){
+      console.log(headerContainer.style.width);
+     if(headerContainer.style.width == "0%"){
+        headerContainer.style.width = "70%";
+      }else{
+        headerContainer.style.width = "0%";
+        
+      }
+    });
+
+    //Menu listing close icon - Click event
+    let closeElement = document.querySelector(".close");
+    closeElement.addEventListener("click", function(event){
+      if(headerContainer.style.width == "0%"){
+        headerContainer.style.width = "70%";
+      }else{
+        headerContainer.style.width = "0%";
+        
+      }
+    });
+    function showTempleMore(){
+      let moreViewElement = document.querySelector("#moreView");
+      let templePDFElement = document.querySelector("#templePDF");
+
+      currentTempleId = currentTempleId || -1;
+      moreViewElement.style.height = "100%";
+
+      //let videoElement = document.querySelector("#videoiframe");
+      let data = JSON.parse(JSON.parse(localStorage.getItem(currentTempleId)));
+      //videoElement.src = "https://www.youtube.com/embed/"+ JSON.parse(data).video[videoNumber];
+
+     // if(templePDFElement.src == "")
+          templePDFElement.src= data.about;
+    }
+
+    function addMoreEvent(pdfSrc){
+      console.log("AddMoreEvent");
+    // Moving the arrow up and down when clicks on it.
+            let contentArrow = document.querySelector("#templeView");
+            let moreElement = document.querySelector(".more");
+            let moreViewElement = document.querySelector("#moreView");
+            
+            templePDFSrc = pdfSrc || "";
+            
+            contentArrow.addEventListener("click", function(event){
+              if(currentTempleId == -1)
+              
+              if(!event.target.classList.contains("moreThreeDots")) return false;
+                currentTempleId  = event.target.dataset.templeid || -1 ;
+                console.log("TEMPLE ID " + currentTempleId );
+
+                loadData( showTempleMore, "https://raw.githubusercontent.com/TempleGuru/templeteju/main/templeById/"+currentTempleId , currentTempleId );
+                
+               
+            });
+            let morecloseElement =  document.querySelector("#moreClose");
+            morecloseElement.addEventListener("click", function(event){
+              console.log('more close');
+              moreViewElement.style.height = "0%";
+            });
+    }
+// Tabs click
+
+    let tabElement = document.querySelector(".tabs");
+    tabElement.addEventListener("click", function(event){ 
+      if(event.target.classList.contains('pdfTab')){
+        pdfTab();   
+      }
+      if(event.target.classList.contains('audioTab')){
+        audioTab();
+      }
+      if(event.target.classList.contains('bookingTab')){
+        bookingTab();   
+      }
+      if(event.target.classList.contains('mapTab')){
+        mapTab();   
+      }
+      if(event.target.classList.contains('booksTab')){
+        booksTab();   
+      }
+      if(event.target.classList.contains('calendarTab')){
+        calendarTab();   
+      }
+      
+
+    });
+
+  // Switch between tabs
+  function pdfTab(){
+    let element = document.querySelector("#tabContent.pdf");
+    element.classList.remove('hide');
+    element.classList.add('show');
+
+    if(templePDFElement.src == "")
+        templePDFElement.src= "https://drive.google.com/file/d/18WsjDqxtMrERT9k7_LpxBIN2qYdyaApI/preview";
+    // hide others
+    let otherElement = document.querySelector("#tabContent.audio");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+    otherElement = document.querySelector("#tabContent.booking");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+    otherElement = document.querySelector("#tabContent.map");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+    otherElement = document.querySelector("#tabContent.books");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+
+    //Tab bg Color change
+    document.querySelector(".pdfTab.tab").classList.add('bgTitleColor');
+    document.querySelector(".audioTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".bookingTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".mapTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".booksTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".calendarTab.tab").classList.remove('bgTitleColor');  
+
+
+  }
+  function audioTab(){
+    let element = document.querySelector("#tabContent.audio");
+    element.classList.remove('hide');
+    element.classList.add('show');
+    
+    let templeAudioElement = document.querySelector("#templeAudio");
+    if(templeAudioElement.src == "")
+       templeAudioElement.src= "https://drive.google.com/file/d/1avidminYwtaOxntF_r3eUa-llub5adwE/preview";
+
+    // hide others
+    let otherElement = document.querySelector("#tabContent.pdf");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+    otherElement = document.querySelector("#tabContent.booking");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+    otherElement = document.querySelector("#tabContent.map");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+    otherElement = document.querySelector("#tabContent.books");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+
+    //Tab bg Color change
+    document.querySelector(".pdfTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".audioTab.tab").classList.add('bgTitleColor');
+    document.querySelector(".bookingTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".mapTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".booksTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".calendarTab.tab").classList.remove('bgTitleColor');  
+  }
+  function bookingTab(){
+    let element = document.querySelector("#tabContent.booking");
+    element.classList.remove('hide');
+    element.classList.add('show');
+    // hide others
+    let otherElement = document.querySelector("#tabContent.pdf");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+    otherElement = document.querySelector("#tabContent.audio");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+    otherElement = document.querySelector("#tabContent.map");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+    otherElement = document.querySelector("#tabContent.books");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+
+    //Tab bg Color change
+    document.querySelector(".pdfTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".audioTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".bookingTab.tab").classList.add('bgTitleColor');
+    document.querySelector(".mapTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".booksTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".calendarTab.tab").classList.remove('bgTitleColor');  
+  }
+  function mapTab(){
+    let element = document.querySelector("#tabContent.map");
+    element.classList.remove('hide');
+    element.classList.add('show');
+    
+    let templeMapElement = document.querySelector("#templeMap");
+    if(templeMapElement.src == "")
+    templeMapElement.src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15506.425613211159!2d79.3377254684981!3d13.681680983221945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb2b562cc4e1291%3A0x85a1996b4b87bcf6!2sTirumala%2C%20Tirupati%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1604419471885!5m2!1sen!2sin";
+    
+    // hide others
+    let otherElement = document.querySelector("#tabContent.pdf");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+    otherElement = document.querySelector("#tabContent.audio");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+    otherElement = document.querySelector("#tabContent.booking");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+    otherElement = document.querySelector("#tabContent.books");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+
+    //Tab bg Color change
+    document.querySelector(".pdfTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".audioTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".bookingTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".mapTab.tab").classList.add('bgTitleColor');
+    document.querySelector(".booksTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".calendarTab.tab").classList.remove('bgTitleColor');  
+  }
+  function booksTab(){
+    let element = document.querySelector("#tabContent.books");
+    element.classList.remove('hide');
+    element.classList.add('show');
+    let templeBooksElement = document.querySelector("#templeBooks");
+    if(templeBooksElement.src == "")
+      templeBooksElement.src= "https://drive.google.com/file/d/1Oonzi66dSlC4rwsNUUjl_CBk1AsPlNJ8/preview";
+    
+    // hide others
+    let otherElement = document.querySelector("#tabContent.pdf");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+    otherElement = document.querySelector("#tabContent.audio");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+    otherElement = document.querySelector("#tabContent.booking");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+    otherElement = document.querySelector("#tabContent.map");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+
+    //Tab bg Color change
+    document.querySelector(".pdfTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".audioTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".bookingTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".mapTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".booksTab.tab").classList.add('bgTitleColor');
+    document.querySelector(".calendarTab.tab").classList.remove('bgTitleColor');  
+
+  }
+    function calendarTab(){
+    let element = document.querySelector("#tabContent.calendar");
+    element.classList.remove('hide');
+    element.classList.add('show');
+    // hide others
+    let otherElement = document.querySelector("#tabContent.pdf");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+    otherElement = document.querySelector("#tabContent.audio");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+    otherElement = document.querySelector("#tabContent.booking");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+    otherElement = document.querySelector("#tabContent.map");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+      otherElement = document.querySelector("#tabContent.books");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+
+    //Tab bg Color change
+    document.querySelector(".pdfTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".audioTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".bookingTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".mapTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".booksTab.tab").classList.remove('bgTitleColor');
+    document.querySelector(".calendarTab.tab").classList.add('bgTitleColor');  
+
+  }
+
+// More View 
+
+
+
+
+    
+
+  </script>
+</body>
