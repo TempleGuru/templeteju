@@ -334,16 +334,17 @@ span#tabTitle {
       let templesArray = JSON.parse(JSON.parse(localStorage.getItem("temples"))).temples;
       let templeViewElement = document.querySelector("#templeView");
       let templeHTML = "";
+      // jatin's video ---> let src = "https://www.youtube.com/embed/kBr49VhLa-g";
       for(let i=0; i<templesArray.length; i++){
           templeHTML +=`  
               <div class="video">
               <iframe src= ${templesArray[i].videolink} width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <div id="basicInfo">
-                <span class="title"> ${templesArray[i].templename} , ${templesArray[0].location} </span> 
+                <span class="title"> ${templesArray[i].templename} , ${templesArray[i].location} </span> 
                 <span class="moreThreeDots" data-templeid=${templesArray[i].id}></span>
                 <span> ${templesArray[i].contacts} </span>
-                <span> ${templesArray[i].website} </span>
+                <span><a href=${templesArray[i].website} target="_blank"> WEBSITE <a> </span>
                 <div class="more hide"></div>
               </div>`;
       } 
