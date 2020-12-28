@@ -199,13 +199,38 @@ a.website{
 span.contacts{
   display: block;
 }
+span.scheduleContent {
+    display: block;
+    margin-bottom: 10px;
+}
 
+/* Spin wheel  */
+
+span.saffron.big {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    font-size: 100px;
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(90deg); }
+  50% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}  
+  
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 <body>
-  
+  <div class="hide wheel"><span class="saffron big">☸</span></div>  
   <div id="headerContainer" class="">
     <span class="close"></span>
     <span> &nbsp;</span>
@@ -215,7 +240,8 @@ span.contacts{
     <span class="audios titleColor"> Audios </span>
     <span class="books titleColor"> Books </span>
     <span class="calendar titleColor"> Calendar </span>
-    <span class="contactus titleColor"> Contact Us </span>
+    <span class="mailus titleColor"> Mail Us: <br>templeguru.info@gmail.com</span>
+    <span class="contactus titleColor"> Contact Us: <br>8939903939</span>
   </div> 
   <div id="moreView" class="show">
     <div id="tabContent" class="more show">
@@ -227,8 +253,9 @@ span.contacts{
               <span class="pdfTab tab bgTitleColor">About</span>
               <span class="mapTab tab">Map</span>
               <span class="bookingTab tab">Darshan tickets</span>
-              <span class="audioTab tab">Audio</span>
-              <span class="booksTab tab">Book</span>
+              <span class="schedulesTab tab">Schedules</span>
+              <!-- <span class="audioTab tab">Audio</span>
+              <span class="booksTab tab">Book</span> -->
           </div>
           <div id="tabContent" class="pdf show">
             <iframe id="templePDF"  width="640" height="480"></iframe>
@@ -244,6 +271,10 @@ span.contacts{
             <span>Helpline numbers:</span>
             <span>1800 425 4141 </span>
             <span>0877 227 7777 </span>
+          </div>
+          <div id="tabContent" class="schedules hide">
+            Opens @ 5AM<br>
+            Closes @ 9PM
           </div>
           <div id="tabContent" class="map hide">
                 <iframe id="templeMap"  width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
@@ -300,6 +331,8 @@ span.contacts{
      let tabViewTitleVideoElement = document.querySelector(".tabViewTitle.video");
      let MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
      localStorage.clear();
+     let wheelElement = document.querySelector(".wheel");
+     
     
      let currentMonth = new Date().getMonth();
      let currentYear = new Date().getFullYear();
@@ -348,7 +381,7 @@ span.contacts{
       let templesArray = JSON.parse(JSON.parse(localStorage.getItem("temples"))).temples;
       let templeViewElement = document.querySelector("#templeView");
       let templeHTML = "";
-      // jatin's video ---> let src = "https://www.youtube.com/embed/kBr49VhLa-g";
+      
       for(let i=0; i<templesArray.length; i++){
           templeHTML +=`  
               <div class="video">
@@ -455,23 +488,34 @@ span.contacts{
     function loadData(callback,url,storageId){
       console.log("loadData: " + callback  + " " + url +" " + storageId);
 
+      //if(storageId < 0) return false; 
+
+     
       if(localStorage.getItem(storageId) == null){  
+            // wheelElement.classList.add('show');
+            // wheelElement.classList.remove('hide');
             let xhttp = new XMLHttpRequest();
             //let calendarDataURL = "https://raw.githubusercontent.com/TempleGuru/templeteju/main/data";
             xhttp.open("GET", url);
             xhttp.send();
+            
             xhttp.onreadystatechange = function(){
+              // wheelElement.classList.add('hide');
+              // wheelElement.classList.remove('show');
               let response;
               if (this.readyState == 4 && this.status == 200){
                 response = xhttp.responseText;
                 localStorage.setItem(storageId, JSON.stringify(response));
                 //showCalendar(currentYear,currentMonth);
+                
                 if(callback)
                   callback();
               }
             }
           }else{
             //showCalendar(currentYear,currentMonth);
+            //wheelElement.classList.add('hide');
+            //wheelElement.classList.remove('show');
             if(callback)
               callback();
           }   
@@ -673,6 +717,9 @@ span.contacts{
       if(event.target.classList.contains('bookingTab')){
         bookingTab();   
       }
+      if(event.target.classList.contains('schedulesTab')){
+        schedulesTab();   
+      }
       if(event.target.classList.contains('mapTab')){
         mapTab();   
       }
@@ -692,8 +739,8 @@ span.contacts{
     element.classList.remove('hide');
     element.classList.add('show');
 
-    if(templePDFElement.src == "")
-        templePDFElement.src= "https://drive.google.com/file/d/18WsjDqxtMrERT9k7_LpxBIN2qYdyaApI/preview";
+    // if(templePDFElement.src == "")
+    //     templePDFElement.src= "https://drive.google.com/file/d/18WsjDqxtMrERT9k7_LpxBIN2qYdyaApI/preview";
     // hide others
     let otherElement = document.querySelector("#tabContent.audio");
     otherElement.classList.remove('show');
@@ -707,26 +754,27 @@ span.contacts{
     otherElement = document.querySelector("#tabContent.books");
     otherElement.classList.remove('show');
     otherElement.classList.add('hide');
+    otherElement = document.querySelector("#tabContent.schedules");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
+
 
     //Tab bg Color change
     document.querySelector(".pdfTab.tab").classList.add('bgTitleColor');
-    document.querySelector(".audioTab.tab").classList.remove('bgTitleColor');
+    //document.querySelector(".audioTab.tab").classList.remove('bgTitleColor');
     document.querySelector(".bookingTab.tab").classList.remove('bgTitleColor');
     document.querySelector(".mapTab.tab").classList.remove('bgTitleColor');
-    document.querySelector(".booksTab.tab").classList.remove('bgTitleColor');
-    document.querySelector(".calendarTab.tab").classList.remove('bgTitleColor');  
+    //document.querySelector(".booksTab.tab").classList.remove('bgTitleColor');
+    //document.querySelector(".calendarTab.tab").classList.remove('bgTitleColor'); 
+    document.querySelector(".schedulesTab.tab").classList.remove('bgTitleColor');  
 
 
   }
-  function audioTab(){
-    let element = document.querySelector("#tabContent.audio");
+  function schedulesTab(){
+    let element = document.querySelector("#tabContent.schedules");
     element.classList.remove('hide');
     element.classList.add('show');
     
-    let templeAudioElement = document.querySelector("#templeAudio");
-    if(templeAudioElement.src == "")
-       templeAudioElement.src= "https://drive.google.com/file/d/1avidminYwtaOxntF_r3eUa-llub5adwE/preview";
-
     // hide others
     let otherElement = document.querySelector("#tabContent.pdf");
     otherElement.classList.remove('show');
@@ -743,12 +791,45 @@ span.contacts{
 
     //Tab bg Color change
     document.querySelector(".pdfTab.tab").classList.remove('bgTitleColor');
-    document.querySelector(".audioTab.tab").classList.add('bgTitleColor');
+  //  document.querySelector(".audioTab.tab").classList.remove('bgTitleColor');
     document.querySelector(".bookingTab.tab").classList.remove('bgTitleColor');
     document.querySelector(".mapTab.tab").classList.remove('bgTitleColor');
-    document.querySelector(".booksTab.tab").classList.remove('bgTitleColor');
-    document.querySelector(".calendarTab.tab").classList.remove('bgTitleColor');  
+  //  document.querySelector(".booksTab.tab").classList.remove('bgTitleColor');
+   // document.querySelector(".calendarTab.tab").classList.remove('bgTitleColor');  
+    document.querySelector(".schedulesTab.tab").classList.add('bgTitleColor');  
   }
+  // function audioTab(){
+  //   let element = document.querySelector("#tabContent.audio");
+  //   element.classList.remove('hide');
+  //   element.classList.add('show');
+    
+  //   let templeAudioElement = document.querySelector("#templeAudio");
+  //   if(templeAudioElement.src == "")
+  //      templeAudioElement.src= "https://drive.google.com/file/d/1avidminYwtaOxntF_r3eUa-llub5adwE/preview";
+
+  //   // hide others
+  //   let otherElement = document.querySelector("#tabContent.pdf");
+  //   otherElement.classList.remove('show');
+  //   otherElement.classList.add('hide');
+  //   otherElement = document.querySelector("#tabContent.booking");
+  //   otherElement.classList.remove('show');
+  //   otherElement.classList.add('hide');
+  //   otherElement = document.querySelector("#tabContent.map");
+  //   otherElement.classList.remove('show');
+  //   otherElement.classList.add('hide');
+  //   otherElement = document.querySelector("#tabContent.books");
+  //   otherElement.classList.remove('show');
+  //   otherElement.classList.add('hide');
+
+  //   //Tab bg Color change
+  //   document.querySelector(".pdfTab.tab").classList.remove('bgTitleColor');
+  //   //document.querySelector(".audioTab.tab").classList.add('bgTitleColor');
+  //   document.querySelector(".bookingTab.tab").classList.remove('bgTitleColor');
+  //   document.querySelector(".mapTab.tab").classList.remove('bgTitleColor');
+  //   //document.querySelector(".booksTab.tab").classList.remove('bgTitleColor');
+  //   //document.querySelector(".calendarTab.tab").classList.remove('bgTitleColor');  
+  //   document.querySelector(".schedulesTab.tab").classList.add('bgTitleColor'); 
+  // }
   function bookingTab(){
     let element = document.querySelector("#tabContent.booking");
     element.classList.remove('hide');
@@ -766,14 +847,18 @@ span.contacts{
     otherElement = document.querySelector("#tabContent.books");
     otherElement.classList.remove('show');
     otherElement.classList.add('hide');
+    otherElement = document.querySelector("#tabContent.schedules");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
 
     //Tab bg Color change
     document.querySelector(".pdfTab.tab").classList.remove('bgTitleColor');
-    document.querySelector(".audioTab.tab").classList.remove('bgTitleColor');
+    //document.querySelector(".audioTab.tab").classList.remove('bgTitleColor');
     document.querySelector(".bookingTab.tab").classList.add('bgTitleColor');
     document.querySelector(".mapTab.tab").classList.remove('bgTitleColor');
-    document.querySelector(".booksTab.tab").classList.remove('bgTitleColor');
-    document.querySelector(".calendarTab.tab").classList.remove('bgTitleColor');  
+    //document.querySelector(".booksTab.tab").classList.remove('bgTitleColor');
+    //document.querySelector(".calendarTab.tab").classList.remove('bgTitleColor');  
+    document.querySelector(".schedulesTab.tab").classList.remove('bgTitleColor'); 
   }
   function mapTab(){
     let element = document.querySelector("#tabContent.map");
@@ -797,83 +882,81 @@ span.contacts{
     otherElement = document.querySelector("#tabContent.books");
     otherElement.classList.remove('show');
     otherElement.classList.add('hide');
+    otherElement = document.querySelector("#tabContent.schedules");
+    otherElement.classList.remove('show');
+    otherElement.classList.add('hide');
 
     //Tab bg Color change
     document.querySelector(".pdfTab.tab").classList.remove('bgTitleColor');
-    document.querySelector(".audioTab.tab").classList.remove('bgTitleColor');
+   // document.querySelector(".audioTab.tab").classList.remove('bgTitleColor');
     document.querySelector(".bookingTab.tab").classList.remove('bgTitleColor');
     document.querySelector(".mapTab.tab").classList.add('bgTitleColor');
-    document.querySelector(".booksTab.tab").classList.remove('bgTitleColor');
-    document.querySelector(".calendarTab.tab").classList.remove('bgTitleColor');  
+    //document.querySelector(".booksTab.tab").classList.remove('bgTitleColor');
+    //document.querySelector(".calendarTab.tab").classList.remove('bgTitleColor'); 
+    document.querySelector(".schedulesTab.tab").classList.remove('bgTitleColor');  
   }
-  function booksTab(){
-    let element = document.querySelector("#tabContent.books");
-    element.classList.remove('hide');
-    element.classList.add('show');
-    let templeBooksElement = document.querySelector("#templeBooks");
-    if(templeBooksElement.src == "")
-      templeBooksElement.src= "https://drive.google.com/file/d/1Oonzi66dSlC4rwsNUUjl_CBk1AsPlNJ8/preview";
+  // function booksTab(){
+  //   let element = document.querySelector("#tabContent.books");
+  //   element.classList.remove('hide');
+  //   element.classList.add('show');
+  //   let templeBooksElement = document.querySelector("#templeBooks");
+  //   if(templeBooksElement.src == "")
+  //     templeBooksElement.src= "https://drive.google.com/file/d/1Oonzi66dSlC4rwsNUUjl_CBk1AsPlNJ8/preview";
     
-    // hide others
-    let otherElement = document.querySelector("#tabContent.pdf");
-    otherElement.classList.remove('show');
-    otherElement.classList.add('hide');
-    otherElement = document.querySelector("#tabContent.audio");
-    otherElement.classList.remove('show');
-    otherElement.classList.add('hide');
-    otherElement = document.querySelector("#tabContent.booking");
-    otherElement.classList.remove('show');
-    otherElement.classList.add('hide');
-    otherElement = document.querySelector("#tabContent.map");
-    otherElement.classList.remove('show');
-    otherElement.classList.add('hide');
+  //   // hide others
+  //   let otherElement = document.querySelector("#tabContent.pdf");
+  //   otherElement.classList.remove('show');
+  //   otherElement.classList.add('hide');
+  //   otherElement = document.querySelector("#tabContent.audio");
+  //   otherElement.classList.remove('show');
+  //   otherElement.classList.add('hide');
+  //   otherElement = document.querySelector("#tabContent.booking");
+  //   otherElement.classList.remove('show');
+  //   otherElement.classList.add('hide');
+  //   otherElement = document.querySelector("#tabContent.map");
+  //   otherElement.classList.remove('show');
+  //   otherElement.classList.add('hide');
 
-    //Tab bg Color change
-    document.querySelector(".pdfTab.tab").classList.remove('bgTitleColor');
-    document.querySelector(".audioTab.tab").classList.remove('bgTitleColor');
-    document.querySelector(".bookingTab.tab").classList.remove('bgTitleColor');
-    document.querySelector(".mapTab.tab").classList.remove('bgTitleColor');
-    document.querySelector(".booksTab.tab").classList.add('bgTitleColor');
-    document.querySelector(".calendarTab.tab").classList.remove('bgTitleColor');  
+  //   //Tab bg Color change
+  //   document.querySelector(".pdfTab.tab").classList.remove('bgTitleColor');
+  //   document.querySelector(".audioTab.tab").classList.remove('bgTitleColor');
+  //   document.querySelector(".bookingTab.tab").classList.remove('bgTitleColor');
+  //   document.querySelector(".mapTab.tab").classList.remove('bgTitleColor');
+  //   document.querySelector(".booksTab.tab").classList.add('bgTitleColor');
+  //   document.querySelector(".calendarTab.tab").classList.remove('bgTitleColor');  
 
-  }
-    function calendarTab(){
-    let element = document.querySelector("#tabContent.calendar");
-    element.classList.remove('hide');
-    element.classList.add('show');
-    // hide others
-    let otherElement = document.querySelector("#tabContent.pdf");
-    otherElement.classList.remove('show');
-    otherElement.classList.add('hide');
-    otherElement = document.querySelector("#tabContent.audio");
-    otherElement.classList.remove('show');
-    otherElement.classList.add('hide');
-    otherElement = document.querySelector("#tabContent.booking");
-    otherElement.classList.remove('show');
-    otherElement.classList.add('hide');
-    otherElement = document.querySelector("#tabContent.map");
-    otherElement.classList.remove('show');
-    otherElement.classList.add('hide');
-      otherElement = document.querySelector("#tabContent.books");
-    otherElement.classList.remove('show');
-    otherElement.classList.add('hide');
+  // }
+  //   function calendarTab(){
+  //   let element = document.querySelector("#tabContent.calendar");
+  //   element.classList.remove('hide');
+  //   element.classList.add('show');
+  //   // hide others
+  //   let otherElement = document.querySelector("#tabContent.pdf");
+  //   otherElement.classList.remove('show');
+  //   otherElement.classList.add('hide');
+  //   otherElement = document.querySelector("#tabContent.audio");
+  //   otherElement.classList.remove('show');
+  //   otherElement.classList.add('hide');
+  //   otherElement = document.querySelector("#tabContent.booking");
+  //   otherElement.classList.remove('show');
+  //   otherElement.classList.add('hide');
+  //   otherElement = document.querySelector("#tabContent.map");
+  //   otherElement.classList.remove('show');
+  //   otherElement.classList.add('hide');
+  //     otherElement = document.querySelector("#tabContent.books");
+  //   otherElement.classList.remove('show');
+  //   otherElement.classList.add('hide');
 
-    //Tab bg Color change
-    document.querySelector(".pdfTab.tab").classList.remove('bgTitleColor');
-    document.querySelector(".audioTab.tab").classList.remove('bgTitleColor');
-    document.querySelector(".bookingTab.tab").classList.remove('bgTitleColor');
-    document.querySelector(".mapTab.tab").classList.remove('bgTitleColor');
-    document.querySelector(".booksTab.tab").classList.remove('bgTitleColor');
-    document.querySelector(".calendarTab.tab").classList.add('bgTitleColor');  
+  //   //Tab bg Color change
+  //   document.querySelector(".pdfTab.tab").classList.remove('bgTitleColor');
+  //   document.querySelector(".audioTab.tab").classList.remove('bgTitleColor');
+  //   document.querySelector(".bookingTab.tab").classList.remove('bgTitleColor');
+  //   document.querySelector(".mapTab.tab").classList.remove('bgTitleColor');
+  //   document.querySelector(".booksTab.tab").classList.remove('bgTitleColor');
+  //   document.querySelector(".calendarTab.tab").classList.add('bgTitleColor');  
 
-  }
-
-// More View 
-
-
-
-
-    
-
-  </script>
+  // }
+  
+ 
+ </script>
 </body>
