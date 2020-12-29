@@ -1,7 +1,12 @@
 {
   "about": "https://drive.google.com/file/d/1gQV0xXBOOsv54KiM0S6SRPfqcSZxKosn/preview",
   "map": "https://www.google.com/maps/embed?pb=!1m24!1m8!1m3!1d61059.15132114111!2d81.97671912695819!3d16.96485954155447!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x3a379a853dbb3d79%3A0x12d28b6d332b135d!2sSaibaba%20Temple%2C%20BBPuram%20to%20Biccavolu%20road%2C%20Balabhadhrapuram%2C%20Andhra%20Pradesh%20533342%2C%20India!3m2!1d16.9544033!2d82.0067364!4m5!1s0x3a379a8ee2532cad%3A0xf3eccfdf347137a1!2sBalabhadhrapuram%2C%20Andhra%20Pradesh%2C%20India!3m2!1d16.959198999999998!2d82.00528829999999!5e0!3m2!1sen!2sus!4v1609254371359!5m2!1sen!2sus",
-  "bookings": "-",
+  "bookings": [
+              "Pooja Request form:",
+              "http://www.andhrashirdi.org/register.php",
+              "Prasadam Order Form:",
+              "http://www.andhrashirdi.org/prasadamregister.php"
+            ],
   "schedules": "",
   "audio": "https://drive.google.com/file/d/1avidminYwtaOxntF_r3eUa-llub5adwE/preview",
   "books": "https://drive.google.com/file/d/1Oonzi66dSlC4rwsNUUjl_CBk1AsPlNJ8/preview"
