@@ -12,15 +12,12 @@
               "08857 - 236114,  98496 66377"
             ],
   "schedules": [
-              "5:00 AM Temple Opens",
-              "5:15 AM Morning Harathi",
-              "12:00 PM Afternoon Harathi",
-              "12:30 PM Temple Closes", 
-              "4:00 PM Temple Opens",
-              "6:00 PM Evening Harathi",
-              "8:30 PM Night Harathi",
-              "9:00 PM Temple closes"
-            ],
+              "4.00 AM Suprabhata Seva -Temple Opens",
+              "9 A.M to 12 Noon Astottara Satanamarchana",
+              "at 9.30 am -Nitya Arjita Kalyanam",
+              "6-00 AM to 7-00 AM -Snapana ", 
+              "6.30 am to 7.00 am - Swarna Tulasidala Kainkarya Seva ( Wednesday)"
+             ],
   "audio": "https://drive.google.com/file/d/1avidminYwtaOxntF_r3eUa-llub5adwE/preview",
   "books": "https://drive.google.com/file/d/1Oonzi66dSlC4rwsNUUjl_CBk1AsPlNJ8/preview"
 }
