@@ -10,7 +10,10 @@
             "1800 425 4141",
             "0877 227 7777"
             ],
-  "schedules": "",
+  "schedules": [
+                "06:00 - 07:00 hrs -Ashtadala Pada Padmaradhana",
+                "02:30-03:00 hrs Suprabhatam"
+            ],
   "audio": "https://drive.google.com/file/d/1avidminYwtaOxntF_r3eUa-llub5adwE/preview",
   "books": "https://drive.google.com/file/d/1Oonzi66dSlC4rwsNUUjl_CBk1AsPlNJ8/preview"
 }
