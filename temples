@@ -2,12 +2,12 @@
   "temples" : 
   [
     { "id" : "1", "templename" : "Sri Venkateswara Swamy Temple", "location": "Tirumala", "videolink": "https://www.youtube.com/embed/J8gKJ_OKN6Y", "website": " https://www.tirumala.org/", "contacts": "1800 425 4141, 0877 227 7777" },
-    { "id" : "2", "templename" : "Andhra Shirdi Sainath Temple", "location": "East Godavari District", "videolink": "https://www.youtube.com/embed/jK4nFJx9rRI", "website": " http://www.andhrashirdi.org/", "contacts": "98496 66377,  08857 - 236114" },
+    { "id" : "2", "templename" : "Andhra Shirdi Sainath Temple", "location": "East Godavari District", "videolink": "https://www.youtube.com/embed/DrJ2KVBvNC0", "website": " http://www.andhrashirdi.org/", "contacts": "98496 66377,  08857 - 236114" },
     { 
       "id" : "3", 
       "templename" : "Sri Venkateswara Swamy Temple", 
       "location": "Dwaraka Tirumala", 
-      "videolink": "https://www.youtube.com/embed/1VOfUma4CCg", 
+      "videolink": "https://www.youtube.com/embed/J84CV3pgh0o", 
       "website": "http://www.dwarakatirumala.org/home.html", 
       "contacts": "+91 8829 271436, +91 8829 271469"
     },
@@ -15,7 +15,7 @@
       "id" : "4", 
       "templename" : "Sri Lakshmi Narasimha Swamy Temple", 
       "location": "Antarvedi", 
-      "videolink": "https://www.youtube.com/embed/HDD_y5jIxto", 
+      "videolink": "https://www.youtube.com/embed/UOPJpTqwESg", 
       "website": "https://www.antarvedisrilakshminarasimhaswamy.com/index.php", 
       "contacts": "+91 8862 259313"
     },
@@ -23,7 +23,7 @@
       "id" : "5", 
       "templename" : "Sri  Ksheera Ramalingeswara Swamy Temple", 
       "location": "Palakollu", 
-      "videolink": "https://www.youtube.com/embed/8I7gm4rEalM", 
+      "videolink": "https://www.youtube.com/embed/G6PjvMVYm1o", 
       "website": "https://tms.ap.gov.in/KRLPKL/cnt/index", 
       "contacts": "+91 9974564654"
     },
@@ -31,7 +31,7 @@
       "id" : "6", 
       "templename" : "Sri  Veera Venkata Satyanarayana Swamy Temple", 
       "location": "Annavaram", 
-      "videolink": "https://www.youtube.com/embed/EXo7J4QyHwo", 
+      "videolink": "https://www.youtube.com/embed/A3bAAoQulFY", 
       "website": "http://annavaramdevasthanam.nic.in/", 
       "contacts": "08868-238121,238125,238163"
     }
