@@ -2,24 +2,25 @@
   "about": "https://drive.google.com/file/d/1kW_lP__vYSC_Nq6CqWx48JUDE0Kfv7G4/preview",
   "map": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7657.56848583456!2d81.73299964285279!3d16.333964900793887!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa21a9c040cb84f3a!2sSri%20Lakshmi%20Narasimha%20Swamy%20Temple!5e0!3m2!1sen!2sin!4v1609294943906!5m2!1sen!2sin",
   "bookings": [
-              "Pooja Request form:",
-              "http://www.andhrashirdi.org/register.php","",
-              "Prasadam Order Form:",
-              "http://www.andhrashirdi.org/prasadamregister.php","",
+              "Accommodation:",
+              "https://www.antarvedisrilakshminarasimhaswamy.com/homenav.php?tab=vasatisadupayam","",
+              "Annadanam",
+              "https://www.antarvedisrilakshminarasimhaswamy.com/homenav.php?tab=annadanam",
+              "Pujas:",
+              "https://www.antarvedisrilakshminarasimhaswamy.com/homenav.php?tab=pujalu",
+              "Pujas & Annadanam-Cotact MailID:",
+              "srislnst@gmail.com","",
               "Emails:",
-              "andhrashirdi@gmail.com , contact@andhrashirdi.org","",
+              "antarveditemple@rediffmail.com","",
               "Contacts:",
-              "08857 - 236114,  98496 66377"
+              "+91 8862 259313"
             ],
   "schedules": [
-              "5:00 AM Temple Opens",
-              "5:15 AM Morning Harathi",
-              "12:00 PM Afternoon Harathi",
-              "12:30 PM Temple Closes", 
-              "4:00 PM Temple Opens",
-              "6:00 PM Evening Harathi",
-              "8:30 PM Night Harathi",
-              "9:00 PM Temple closes"
+              "9.30 AM Temple Opens",
+              "12.30 PM Temple Closes",
+              "2:30 PM Temple Opens",
+              "7:30 PM Temple Closes", "",
+              "Hours or Services may differ. For more details , Please visit official site."
             ],
   "audio": "https://drive.google.com/file/d/1avidminYwtaOxntF_r3eUa-llub5adwE/preview",
   "books": "https://drive.google.com/file/d/1Oonzi66dSlC4rwsNUUjl_CBk1AsPlNJ8/preview"
