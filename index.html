@@ -1,5 +1,6 @@
 <head>
   <title> TempleGuru.in </title>
+  
   <style>
     div#header{
       font-size: 24px;
@@ -225,14 +226,18 @@ span.saffron.big {
   100% { transform: rotate(360deg); }
 }  
 .coming{
-  color: yellow;
+  background-color: yellow;
   display: inline;
+  
 }
 sup {
     font-size: x-small;
 }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" 
+      type="image/png" 
+      href="http://templeguru.in/favicon.png">
 
 </head>
 <body>
@@ -362,7 +367,7 @@ sup {
     prevVideoElement.addEventListener("click", function(event){
       
       if(currentView == "gita")
-      showVideo(--urrentVideoNumber);
+      showVideo(--currentVideoNumber);
       else if(currentView == "live")
       showLiveDarshan(--currentVideoNumber);
       else if(currentView == "audios")
@@ -387,9 +392,12 @@ sup {
       let templeHTML = "";
       
       for(let i=0; i<templesArray.length; i++){
+        let src = templesArray[i].videolink;
+        if(i==0) src = "https://drive.google.com/file/d/18WsjDqxtMrERT9k7_LpxBIN2qYdyaApI/preview";
+
           templeHTML +=`  
               <div class="video">
-              <iframe src= ${templesArray[i].videolink} width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe src= ${src} width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <div id="basicInfo">
                 <span class="title"> ${templesArray[i].templename} , ${templesArray[i].location} </span> 
@@ -680,9 +688,12 @@ sup {
       //let videoElement = document.querySelector("#videoiframe");
       let data = JSON.parse(JSON.parse(localStorage.getItem(currentTempleId)));
       //videoElement.src = "https://www.youtube.com/embed/"+ JSON.parse(data).video[videoNumber];
-
-     // if(templePDFElement.src == "")
-     templePDFElement.src= data.about;
+    //  alert("test");
+    //  // if(templePDFElement.src == "")
+    //  if( currentTempleId == "1")
+    //   templePDFElement.src= "https://drive.google.com/file/d/18WsjDqxtMrERT9k7_LpxBIN2qYdyaApI/preview";
+    //  else
+      templePDFElement.src= data.about;
           // Dashan and Accomodation tab Content Preparation
           let innerHTML = "";
           if(data.bookings.length != 0 ){
