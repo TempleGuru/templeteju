@@ -11,7 +11,8 @@
       "location": "Dwaraka Tirumala", 
       "videolink": "https://www.youtube.com/embed/J84CV3pgh0o", 
       "website": "http://www.dwarakatirumala.org/home.html", 
-      "contacts": "+91 8829 271436, +91 8829 271469"
+      "contacts": "+91 8829 271436, +91 8829 271469",
+      "image": ""
     },
     { 
       "id" : "4", 
@@ -19,7 +20,8 @@
       "location": "Antarvedi", 
       "videolink": "https://www.youtube.com/embed/UOPJpTqwESg", 
       "website": "https://www.antarvedisrilakshminarasimhaswamy.com/index.php", 
-      "contacts": "+91 8862 259313"
+      "contacts": "+91 8862 259313",
+      "image": ""
     },
     { 
       "id" : "5", 
@@ -27,7 +29,8 @@
       "location": "Palakollu", 
       "videolink": "https://www.youtube.com/embed/G6PjvMVYm1o", 
       "website": "https://tms.ap.gov.in/KRLPKL/cnt/index", 
-      "contacts": "+91 9974564654"
+      "contacts": "+91 9974564654",
+      "image": ""
     },
     { 
       "id" : "6", 
@@ -35,7 +38,8 @@
       "location": "Annavaram", 
       "videolink": "https://www.youtube.com/embed/A3bAAoQulFY", 
       "website": "http://annavaramdevasthanam.nic.in/", 
-      "contacts": "08868-238121,238125,238163"
+      "contacts": "08868-238121,238125,238163",
+      "image": ""
     }
 
   ]
