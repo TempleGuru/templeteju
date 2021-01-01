@@ -1,8 +1,10 @@
 {
   "temples" : 
   [
-    { "id" : "1", "templename" : "Sri Venkateswara Swamy Temple", "location": "Tirumala", "videolink": "https://www.youtube.com/embed/J8gKJ_OKN6Y", "website": " https://www.tirumala.org/", "contacts": "1800 425 4141, 0877 227 7777" },
-    { "id" : "2", "templename" : "Andhra Shirdi Sainath Temple", "location": "East Godavari District", "videolink": "https://www.youtube.com/embed/DrJ2KVBvNC0", "website": " http://www.andhrashirdi.org/", "contacts": "98496 66377,  08857 - 236114" },
+    { "id" : "1", "templename" : "Sri Venkateswara Swamy Temple", "location": "Tirumala", "videolink": "https://www.youtube.com/embed/J8gKJ_OKN6Y", "website": " https://www.tirumala.org/", "contacts": "1800 425 4141, 0877 227 7777", 
+      "image": "https://lh3.google.com/u/0/d/1erzWtZlKjxpTp6r-KiwZMhxIOaXVyz_k=w1366-h599-iv1" },
+    { "id" : "2", "templename" : "Andhra Shirdi Sainath Temple", "location": "East Godavari District", "videolink": "https://www.youtube.com/embed/DrJ2KVBvNC0", "website": " http://www.andhrashirdi.org/", "contacts": "98496 66377,  08857 - 236114",
+      "image": "https://lh3.googleusercontent.com/PdBOR93JU_aH5w9tejfUL640CJRvJc7FzdpK1vM8HOa3D7FZ-GqriM10mTE6-NcXAEl3KYOGMdRuXRmNzo38d4vmKgJY91aI8nz6rIDtR6TxvEX01i93aJJnyij-TJzAfAIHDYNmS54_YxFlmKC4332OcL62F5NDgYV_Qf4PoFCgnX7p4z4BkMpfUH3cfTdvpqbqcYByJDuDD3MXQbEmsXfIq6SyKmBAfCpSSCB2xbIqI2lDMtWmwdPkLKRjmpzVjGIA-vqCT4VdoxCwA_oLgXZYcEsLUlngDl8aa9de29cYueGNqLmUc-zhWKsoAam8nKzwHtrNIg4kEUxx6di8REekImvMPAOwGrRsUWsJgtN1Z5aIHjrqRkIZedJStX6roTfjaqClmlIIcOBwABvniLIXNxPSr9Z9mlG10NSol-77xS3If5wrKtsg36bJeZ0vl4g1tzpFTYvRuzGP7Mr3MZ0-ruDiK9vDLQcdKa3aBDWFM14Tow60AZgCuWatCDSCWnPmZKscjniE-RG2ynp6e-u729JxIS6kHV_DhFEz8ooB2xK1MrxBPzoJBe4y5yzzAEgte4r1o15FW7DBhbk9E5UYaLvyA-EOWZRb52PqL0Ls1ABd7dvCeNRWfDL-5x-ruNCxD0a4xgd9C_dHM6YGOP7Fxw92c-y2oYER0cxr96u0f9K3zqhTGdNL=w292-h600-no?authuser=0"},
     { 
       "id" : "3", 
       "templename" : "Sri Venkateswara Swamy Temple", 
