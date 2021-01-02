@@ -392,13 +392,9 @@ sup {
       let templeHTML = "";
       
       for(let i=0; i<templesArray.length; i++){
-        let src = templesArray[i].videolink;
-        if(i==0) src = "https://drive.google.com/file/d/18WsjDqxtMrERT9k7_LpxBIN2qYdyaApI/preview";
-        if(i == 1) src = "https://drive.google.com/file/d/1UjqKF4P7TgCU6dbR2oJPAuTwQfP1AHQV/preview";
-
           templeHTML +=`  
               <div class="video">
-              <iframe src= ${src} width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe src= ${templesArray[i].videolink} width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <div id="basicInfo">
                 <span class="title"> ${templesArray[i].templename} , ${templesArray[i].location} </span> 
@@ -689,12 +685,9 @@ sup {
       //let videoElement = document.querySelector("#videoiframe");
       let data = JSON.parse(JSON.parse(localStorage.getItem(currentTempleId)));
       //videoElement.src = "https://www.youtube.com/embed/"+ JSON.parse(data).video[videoNumber];
-    //  alert("test");
-    //  // if(templePDFElement.src == "")
-    //  if( currentTempleId == "1")
-    //   templePDFElement.src= "https://drive.google.com/file/d/18WsjDqxtMrERT9k7_LpxBIN2qYdyaApI/preview";
-    //  else
-      templePDFElement.src= data.about;
+
+     // if(templePDFElement.src == "")
+     templePDFElement.src= data.about;
           // Dashan and Accomodation tab Content Preparation
           let innerHTML = "";
           if(data.bookings.length != 0 ){
