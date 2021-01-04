@@ -40,7 +40,14 @@
       "website": "http://annavaramdevasthanam.nic.in/", 
       "contacts": "08868-238121,238125,238163",
       "image": ""
-    }
-
+    },
+    { 
+      "id" : "7", 
+      "templename" : "SRI CHALUKYA KUMARARAMA SRI BHIMESWARASWAMY VARI TEMPLE", 
+      "location": "Samalkot", 
+      "videolink": "https://www.youtube.com/embed/EXo7J4QyHwo", 
+      "website": "https://eastgodavari.ap.gov.in/tourism/temples/sri-chalukya-kumararama-sri-bhimeswaraswamy-vari-temple-samalkot/", 
+      "contacts": "--"
+   }
   ]
 }
