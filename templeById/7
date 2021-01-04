@@ -8,17 +8,13 @@
               "Emails:",
               "-","",
               "Contacts:",
-              "-"
+              "+918897205858"
             ],
   "schedules": [
-              "5:00 AM Temple Opens",
-              "5:15 AM Morning Harathi",
-              "12:00 PM Afternoon Harathi",
-              "12:30 PM Temple Closes", 
+              "7:00 AM–Temple Opens",
+              "12:00 PM Temple Closes",
               "4:00 PM Temple Opens",
-              "6:00 PM Evening Harathi",
-              "8:30 PM Night Harathi",
-              "9:00 PM Temple closes"
+              "8:00 PM Temple closes"
             ],
   "audio": "https://drive.google.com/file/d/1avidminYwtaOxntF_r3eUa-llub5adwE/preview",
   "books": "https://drive.google.com/file/d/1Oonzi66dSlC4rwsNUUjl_CBk1AsPlNJ8/preview"
