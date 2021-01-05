@@ -48,6 +48,14 @@
       "videolink": "https://www.youtube.com/embed/EXo7J4QyHwo", 
       "website": "https://eastgodavari.ap.gov.in/tourism/temples/sri-chalukya-kumararama-sri-bhimeswaraswamy-vari-temple-samalkot/", 
       "contacts": "--"
-   }
+   },
+   { 
+    "id" : "8", 
+    "templename" : "Sri Talupulamma Ammavari Devasthanam", 
+    "location": "Tuni,EG", 
+    "videolink": "https://www.youtube.com/embed/EXo7J4QyHwo", 
+    "website": "https://tms.ap.gov.in/tatuni/cnt/about-temple", 
+    "contacts": "08854-251133"
+}
   ]
 }
