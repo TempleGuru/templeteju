@@ -56,6 +56,14 @@
     "videolink": "https://www.youtube.com/embed/EXo7J4QyHwo", 
     "website": "https://tms.ap.gov.in/tatuni/cnt/about-temple", 
     "contacts": "08854-251133"
+},
+   { 
+    "id" : "9", 
+    "templename" : "Sri Talupulamma Ammavari Devasthanam", 
+    "location": "Kanipakam,Chittoor", 
+    "videolink": "https://www.youtube.com/embed/EXo7J4QyHwo", 
+    "website": "http://www.kanipakam.com/home.html", 
+    "contacts": "08573-281540, 08573-281747,08573-281112"
 }
   ]
 }
