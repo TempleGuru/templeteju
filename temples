@@ -64,6 +64,14 @@
     "videolink": "https://www.youtube.com/embed/EXo7J4QyHwo", 
     "website": "http://www.kanipakam.com/home.html", 
     "contacts": "08573-281540, 08573-281747,08573-281112"
+},
+ { 
+    "id" : "10", 
+    "templename" : "Kanakadurgamma Temple", 
+    "location": "Vijayawada,Krishna District", 
+    "videolink": "https://www.youtube.com/embed/EXo7J4QyHwo", 
+    "website": "https://kanakadurgamma.org/", 
+    "contacts": "1800 425 9099"
 }
   ]
 }
