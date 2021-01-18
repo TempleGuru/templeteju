@@ -1,0 +1,26 @@
+{
+  "about": "https://drive.google.com/file/d/1yFK29tHYeCeFo2pNyxc6Qts9NhWvgjXw/preview",
+  "map": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7576.594223854897!2d83.913549!3d18.288016!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x74f7ce6bc1bfae43!2sSri%20Sri%20Sri%20Suryanarayana%20Swamy%20Temple!5e0!3m2!1sen!2sin!4v1610999740648!5m2!1sen!2sin",
+  "bookings": [
+              "Pooja Request form:",
+              "http://www.andhrashirdi.org/register.php","",
+              "Prasadam Order Form:",
+              "http://www.andhrashirdi.org/prasadamregister.php","",
+              "Emails:",
+              "andhrashirdi@gmail.com , contact@andhrashirdi.org","",
+              "Contacts:",
+              "08857 - 236114,  98496 66377"
+            ],
+  "schedules": [
+              "5:00 AM Temple Opens",
+              "5:15 AM Morning Harathi",
+              "12:00 PM Afternoon Harathi",
+              "12:30 PM Temple Closes", 
+              "4:00 PM Temple Opens",
+              "6:00 PM Evening Harathi",
+              "8:30 PM Night Harathi",
+              "9:00 PM Temple closes"
+            ],
+  "audio": "https://drive.google.com/file/d/1avidminYwtaOxntF_r3eUa-llub5adwE/preview",
+  "books": "https://drive.google.com/file/d/1Oonzi66dSlC4rwsNUUjl_CBk1AsPlNJ8/preview"
+}
