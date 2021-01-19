@@ -1,0 +1,26 @@
+{
+  "about": "https://drive.google.com/file/d/1U6rwwiq3cUkRtgZaJOEhfJrW-a90-g94/preview",
+  "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7750.97740667379!2d79.69387983195047!3d13.749376601055141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4d3e54318a70e9%3A0x706957a2638f13c1!2sSrikalahasti%20Temple!5e0!3m2!1sen!2sus!4v1611048690806!5m2!1sen!2sus",
+  "bookings": [
+              "Pooja Request form:",
+              "http://www.andhrashirdi.org/register.php","",
+              "Prasadam Order Form:",
+              "http://www.andhrashirdi.org/prasadamregister.php","",
+              "Emails:",
+              "andhrashirdi@gmail.com , contact@andhrashirdi.org","",
+              "Contacts:",
+              "08857 - 236114,  98496 66377"
+            ],
+  "schedules": [
+              "5:00 AM Temple Opens",
+              "5:15 AM Morning Harathi",
+              "12:00 PM Afternoon Harathi",
+              "12:30 PM Temple Closes", 
+              "4:00 PM Temple Opens",
+              "6:00 PM Evening Harathi",
+              "8:30 PM Night Harathi",
+              "9:00 PM Temple closes"
+            ],
+  "audio": "https://drive.google.com/file/d/1avidminYwtaOxntF_r3eUa-llub5adwE/preview",
+  "books": "https://drive.google.com/file/d/1Oonzi66dSlC4rwsNUUjl_CBk1AsPlNJ8/preview"
+} 
