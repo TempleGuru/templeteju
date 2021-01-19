@@ -14,11 +14,6 @@
   "schedules": [
               "5:30 AM Suprabatham",
               "6:00 AM Sarva Darshanam",
-              "12:00 PM Afternoon Harathi",
-              "12:30 PM Temple Closes", 
-              "4:00 PM Temple Opens",
-              "6:00 PM Evening Harathi",
-              "8:30 PM Night Harathi",
               "9:00 PM Temple closes(Everyday)",
               "9:30 PM Temple closes(on Saturday and on Monday)"
             ],
