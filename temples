@@ -88,6 +88,14 @@
     "videolink": "https://www.youtube.com/embed/EXo7J4QyHwo", 
     "website": "http://www.arasavallisungod.org/", 
     "contacts": "08942-222421"
+},
+ { 
+    "id" : "13", 
+    "templename" : "Sri Kalahasti Temple", 
+    "location": "Sri Kalahasti,Chittoor", 
+    "videolink": "https://www.youtube.com/embed/EXo7J4QyHwo", 
+    "website": "https://srikalahasthitemple.com/", 
+    "contacts": "08942-222421"
 }
   ]
 }
