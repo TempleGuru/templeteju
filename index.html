@@ -5,6 +5,7 @@
       div#header{
         font-size: 24px;
         margin: 12px 0px;
+        text-align: left;
       }
       .title{
         font-weight: bold;
@@ -14,7 +15,8 @@
       width: 96%;
   }
       div#templeView {
-        text-align: left;
+        text-align: center;
+        background-color: #eaefea;
   }
   #moreOption span {
       padding: 0px 10px;
@@ -230,13 +232,14 @@
   .coming{
     background-color: yellow;
     display: inline;
-    color: white;
+   
   }
   sup {
       font-size: x-small;
   }
   img.moreThreeDots {
     margin: 0 auto;
+    border: 3px solid #F93;
 }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -251,7 +254,7 @@
       <span class="close"></span>
       <span> &nbsp;</span>
       <span class="home titleColor"> Home </span>  
-      <span class="gita titleColor">  Bhagavad Gita </span>
+      <!-- <span class="gita titleColor">  Bhagavad Gita </span> -->
       <span class="liveDarshan titleColor">  Live Darshan </span>
       <span class="audios titleColor"> Audios </span>
       <span class="books titleColor"> <label class="coming">Books</label></span>
@@ -261,7 +264,7 @@
     <div id="moreView" class="show">
       <div id="tabContent" class="more show">
         <span id="moreClose" class="close bgColor more"></span>
-        <span class="tabViewTitle more"></span>
+        <!-- <span class="tabViewTitle more"></span> -->
         <div id="moreContent">
           <div class="more show">
             <div class="tabs">
@@ -395,11 +398,13 @@
         let templesArray = JSON.parse(JSON.parse(localStorage.getItem("temples"))).temples;
         let templeViewElement = document.querySelector("#templeView");
         let templeHTML = "";
+
+                
         //<iframe src= ${templesArray[i].videolink} width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         for(let i=0; i<templesArray.length; i++){
             templeHTML +=`  
                 <div class="video">
-                  <img class="moreThreeDots" data-templeid=${templesArray[i].id} src="images/${i+1}.png"/> 
+                  <img class="moreThreeDots" loading="lazy" data-templeid=${templesArray[i].id} src="images/${i+1}.png"/> 
                 </div>
                 <div id="basicInfo">
                   <span class="title"> ${templesArray[i].templename} , ${templesArray[i].location} </span> 
@@ -564,7 +569,7 @@
   
         
       });
-      gitaElement.addEventListener("click", function(event){
+      /* gitaElement.addEventListener("click", function(event){
         loadData(showVideo, "https://raw.githubusercontent.com/TempleGuru/templeteju/main/gita", "video");
         currentView = "gita";
         currentVideoNumber = 0;
@@ -577,7 +582,7 @@
         calendarViewElement.classList.add('hide');
   
         
-      });
+      }); */
       liveDarshanElement.addEventListener("click", function(event){
         loadData(showLiveDarshan, "https://raw.githubusercontent.com/TempleGuru/templeteju/main/live", "live");
         currentView = "live";
