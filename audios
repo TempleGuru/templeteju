@@ -2,8 +2,8 @@
   "audios":
   [
       {
-          "audioLink" : "https://www.youtube.com/watch?v=BDs8mpRpkqQ&list=PL9-GB8jMeurKtLrONb6g_xt6UjjverSIH&index=8",
-          "message" : "way2news"
+          "audioLink" : "https://www.youtube.com/embed/BDs8mpRpkqQ?list=PL9-GB8jMeurKtLrONb6g_xt6UjjverSIH",
+          "message" : "way2news-embed"
         },
         {
           "audioLink" : "https://drive.google.com/file/d/1avidminYwtaOxntF_r3eUa-llub5adwE/preview",
