@@ -411,9 +411,10 @@ img.moreThreeDots {
               
       //<iframe src= ${templesArray[i].videolink} width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       for(let i=0; i<templesArray.length; i++){
+        let defaultimg = "images/default.png";
           templeHTML +=`  
               <div class="video">
-                <img class="moreThreeDots" loading="lazy" data-templeid=${templesArray[i].id} src="images/${i+1}.png"/> 
+                <img class="moreThreeDots" loading="lazy" onerror="this.src='${defaultimg}'" data-templeid=${templesArray[i].id} src="images/${i+1}.png"/> 
               </div>
               <div id="basicInfo">
                 <span class="title"> ${templesArray[i].templename} , ${templesArray[i].location} </span> 
@@ -578,7 +579,7 @@ img.moreThreeDots {
 
       
     });
-    /* gitaElement.addEventListener("click", function(event){
+     gitaElement.addEventListener("click", function(event){
       loadData(showVideo, "https://raw.githubusercontent.com/TempleGuru/templeteju/main/gita", "video");
       currentView = "gita";
       currentVideoNumber = 0;
@@ -591,7 +592,7 @@ img.moreThreeDots {
       calendarViewElement.classList.add('hide');
 
       
-    }); */
+    }); 
     liveDarshanElement.addEventListener("click", function(event){
       loadData(showLiveDarshan, "https://raw.githubusercontent.com/TempleGuru/templeteju/main/live", "live");
       currentView = "live";
