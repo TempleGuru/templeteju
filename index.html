@@ -263,7 +263,8 @@ img.moreThreeDots {
     <span class="close"></span>
     <span> &nbsp;</span>
     <span class="home titleColor"> Home </span>  
-    <span class="gita titleColor">  Maha Bharatham / Bhagavadgita</span>
+    <span class="temples titleColor"> Temples </span>  
+    <span class="gita titleColor">Maha Bharatham / Bhagavad Gita</span>
     <span class="liveDarshan titleColor">  Live Darshan </span>
     <span class="audios titleColor"> Audios </span>
     <span class="books titleColor"> <label class="coming">Books</label></span>
@@ -414,7 +415,7 @@ img.moreThreeDots {
         let defaultimg = "images/default.png";
           templeHTML +=`  
               <div class="video">
-                <img class="moreThreeDots" loading="lazy" onerror="this.src='${defaultimg}'" data-templeid=${templesArray[i].id} src="images/${i+1}.png"/> 
+                <img class="moreThreeDots" loading="lazy" alt="${templesArray[i].templename}" data-templeid=${templesArray[i].id} src="images/${i+1}.png"/> 
               </div>
               <div id="basicInfo">
                 <span class="title"> ${templesArray[i].templename} , ${templesArray[i].location} </span> 
@@ -554,6 +555,7 @@ img.moreThreeDots {
 
     //Menu- Container Views Change 
     let homeElement = document.querySelector(".home");
+    let templesElement = document.querySelector(".temples");
     let gitaElement = document.querySelector(".gita");
     let audiosElement = document.querySelector(".audios");
     let liveDarshanElement = document.querySelector(".liveDarshan");
@@ -569,6 +571,20 @@ img.moreThreeDots {
     
     homeElement.addEventListener("click", function(event){
       currentView = "home";
+      window.location.href = "./index.html";
+      headerContainer.style.width = "0%";
+      templeViewElement.classList.remove('hide');
+      templeViewElement.classList.add('show');
+      videoViewElement.classList.remove('show');
+      videoViewElement.classList.add('hide');
+      calendarViewElement.classList.remove('show');
+      calendarViewElement.classList.add('hide');
+
+      
+    });
+    templesElement.addEventListener("click", function(event){
+      currentView = "temples";
+      window.location.href = "./temples.html";
       headerContainer.style.width = "0%";
       templeViewElement.classList.remove('hide');
       templeViewElement.classList.add('show');
@@ -580,6 +596,7 @@ img.moreThreeDots {
       
     });
      gitaElement.addEventListener("click", function(event){
+      window.location.href = "./epics.html";
       loadData(showVideo, "https://raw.githubusercontent.com/TempleGuru/templeteju/main/gita", "video");
       currentView = "gita";
       currentVideoNumber = 0;
