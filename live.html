@@ -308,6 +308,32 @@
     </div>
   </div>
   <!-- End of Video View-->
+  <div id="calendarView" class="hide">
+    <div id="tabContent" class="calendar show">
+      <div id="backHeader">
+        <span class="back bgTitleColor calendar">
+          < BACK <span id="tabTitle"> Calendar </span>
+        </span>
+        <span class="tabViewTitle month"> Calendar : </span>
+      </div>
+      <iframe
+        id="calendariframe"
+        title="Telugu Calendar"
+        src=""
+        width="640"
+        height="480"
+      ></iframe>
+      <!-- <span class="loadMore">Show More</span> -->
+      <!-- allowfullscreen target="_parent" -->
+      <div id="months">
+        <span class="prevMonth"><<</span>&nbsp;&nbsp;&nbsp;
+        <span class="currentMonth"> Present</span>&nbsp;&nbsp;&nbsp;
+        <span class="nextMonth">>></span>
+      </div>
+    </div>
+  </div>
+  <!-- End of Calendar View-->
+  
   <div id="templeView" class="show">
     <div id="header">
       <span class="saffron">&#9784;</span>
@@ -547,6 +573,18 @@
       videoViewElement.classList.add("hide");
       calendarViewElement.classList.remove("hide");
       calendarViewElement.classList.add("show");
+    });
+    backCalendarElement.addEventListener("click", function (event) {
+      currentView = "home";
+      currentVideoNumber = 0;
+      //headerContainer.style.width = "0%";
+      console.log("backElement :click");
+      templeViewElement.classList.remove("hide");
+      templeViewElement.classList.add("show");
+      videoViewElement.classList.remove("show");
+      videoViewElement.classList.add("hide");
+      calendarViewElement.classList.remove("show");
+      calendarViewElement.classList.add("hide");
     });
 
     //Menu Clicking - Show / Hide Menu list
