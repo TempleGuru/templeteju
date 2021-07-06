@@ -24,6 +24,13 @@
         U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
         U+2212, U+2215, U+FEFF, U+FFFD;
     }
+    .astrology :not(.today){
+      text-align: left;
+      padding-bottom: 9px;
+    }
+    .astroTitle{
+      color: #ff9933;
+    }
     div#liveVideo {
       width: 80%;
       margin: 0 10%;
@@ -527,40 +534,22 @@
               </div>`;
       }
       templeViewElement.insertAdjacentHTML("beforeend", templeHTML);
-      caledarHTML = `<div id="basicInfo"  style="font-family: 'Timmana';" class="today">
-        మంగళవారం, 6 జులై 2021
-       
-          <table align="center" class="table calendar-details table-sm t-xsmall">
-<tbody><tr>
-<td>తిథి   <span class="pull-right">:</span></td>
-<td>
-  కృష్ణపక్ష ద్వాదశి ( సోమవారం, 5 జులై 2021, రాత్రి 10:30 నుండి
-బుధవారం, 7 జులై 2021, రాత్రి 1:02 వరకు - తదుపరి : కృష్ణపక్ష త్రయోదశి ) </td>
-</tr>
-<tr>
-<td>నక్షత్రము  <span class="pull-right">:</span></td>
-<td>
-  కృత్తిక </td>
-</tr>
-<tr>
-<td> రాహుకాలం <span class="pull-right">:</span></td>
-<td>
-  మధ్యాహ్నం 3:24 నుండి సాయంత్రం 5:02 వరకు</td>
-</tr>
-<tr>
-<td>దుర్ముహుర్తము<span class="pull-right">:</span></td>
-<td>ఉదయం 8:12 నుండి ఉదయం 9:04 వరకు
-మళ్ళీ దుర్ముహుర్తము
-రాత్రి 11:55 నుండి రాత్రి 12:47 వరకు</td>
-</tr>
-<tr>
-<td>వర్జ్యం<span class="pull-right">:</span></td>
-<td>వర్జం ఆరంభము మంగళవారం, 6 జులై 2021, ఉదయం 7:16 నుండి
-మంగళవారం, 6 జులై 2021, ఉదయం 9:04 వరకు</td>
-</tr>
-</tbody></table>
+      caledarHTML = `
+      <div id="basicInfo"  class="astrology" style="font-family: 'Timmana';">
+        <div class="today"> మంగళవారం, 6 జులై 2021 </div>
+        <div> <span class="astroTitle">తిథి : </span> కృష్ణపక్ష ద్వాదశి ( సోమవారం, 5 జులై 2021, రాత్రి 10:30 నుండి
+                                బుధవారం, 7 జులై 2021, రాత్రి 1:02 వరకు - తదుపరి : కృష్ణపక్ష త్రయోదశి )
+        </div> 
+        <div><span class="astroTitle"> నక్షత్రము : </span>కృత్తిక </div>  
+        <div><span class="astroTitle"> రాహుకాలం : </span>మధ్యాహ్నం 3:24 నుండి సాయంత్రం 5:02 వరకు </div>
+        <div><span class="astroTitle"> దుర్ముహుర్తము : </span>ఉదయం 8:12 నుండి ఉదయం 9:04 వరకు 
+                          మళ్ళీ దుర్ముహుర్తము రాత్రి 11:55 నుండి రాత్రి 12:47 వరకు
+        </div>
+        <div><span class="astroTitle">వర్జ్యం : </span>వర్జం ఆరంభము మంగళవారం, 6 జులై 2021, ఉదయం 7:16 నుండి
+            మంగళవారం, 6 జులై 2021, ఉదయం 9:04 వరకు
+        </div>
 
-</div>
+    </div>
 `;
       templeViewElement.insertAdjacentHTML("beforeend", caledarHTML);
 
