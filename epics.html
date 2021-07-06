@@ -706,5 +706,19 @@
         audioNumber
       ].message;
     }
+    function showCalendar(year, month) {
+      if (year == undefined && month == undefined) {
+        year = currentYear;
+        month = currentMonth;
+      }
+      console.log("showCalendar: " + year + "  " + month);
+      tabViewTitleMonthElement.innerHTML =
+        MONTHS[currentMonth] + "," + currentYear;
+      let calendarElement = document.querySelector("#calendariframe");
+      let data = JSON.parse(localStorage.getItem("calendar"));
+      calendarElement.src = JSON.parse(data).calendar[year - 2020].months[
+        month
+      ];
+    }
   </script>
 </body>
