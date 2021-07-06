@@ -568,20 +568,21 @@
       calendarViewElement.classList.add("hide");
     });
     liveDarshanElement.addEventListener("click", function (event) {
-      loadData(
-        showLiveDarshan,
-        "https://raw.githubusercontent.com/TempleGuru/templeteju/main/live",
-        "live"
-      );
-      currentView = "live";
-      currentVideoNumber = 0;
-      headerContainer.style.width = "0%";
-      templeViewElement.classList.remove("show");
-      templeViewElement.classList.add("hide");
-      videoViewElement.classList.remove("hide");
-      videoViewElement.classList.add("show");
-      calendarViewElement.classList.remove("show");
-      calendarViewElement.classList.add("hide");
+      window.location.href = "./live.html";
+      // loadData(
+      //   showLiveDarshan,
+      //   "https://raw.githubusercontent.com/TempleGuru/templeteju/main/live",
+      //   "live"
+      // );
+      // currentView = "live";
+      // currentVideoNumber = 0;
+      // headerContainer.style.width = "0%";
+      // templeViewElement.classList.remove("show");
+      // templeViewElement.classList.add("hide");
+      // videoViewElement.classList.remove("hide");
+      // videoViewElement.classList.add("show");
+      // calendarViewElement.classList.remove("show");
+      // calendarViewElement.classList.add("hide");
     });
     audiosElement.addEventListener("click", function (event) {
       loadData(
@@ -690,6 +691,20 @@
         currentTempleId = event.target.dataset.templeid || -1;
         console.log("TEMPLE ID " + currentTempleId);
       });
+    }
+    function showAudios(audioNumber) {
+      if (audioNumber == undefined) audioNumber = 0;
+      console.log("audioNumber: " + audioNumber);
+
+      let tabTitleElement = document.querySelector("#videoView #tabTitle");
+      tabTitleElement.innerHTML = "Audios";
+
+      let videoElement = document.querySelector("#videoiframe");
+      let data = JSON.parse(localStorage.getItem("audios"));
+      videoElement.src = JSON.parse(data).audios[audioNumber].audioLink;
+      tabViewTitleVideoElement.innerHTML = JSON.parse(data).audios[
+        audioNumber
+      ].message;
     }
   </script>
 </body>

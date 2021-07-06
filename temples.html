@@ -498,7 +498,7 @@
 
       tabViewTitleVideoElement.innerHTML = "Chapter 1";
       let videoElement = document.querySelector("#videoiframe");
-      let data = JSON.parse(localStorage.getItem("video"));
+      let data = JSON.parse(localStorage.getItem("audios"));
       videoElement.src =
         "https://www.youtube.com/embed/" + JSON.parse(data).video[videoNumber];
     }
@@ -662,20 +662,21 @@
       calendarViewElement.classList.add("hide");
     });
     liveDarshanElement.addEventListener("click", function (event) {
-      loadData(
-        showLiveDarshan,
-        "https://raw.githubusercontent.com/TempleGuru/templeteju/main/live",
-        "live"
-      );
-      currentView = "live";
-      currentVideoNumber = 0;
-      headerContainer.style.width = "0%";
-      templeViewElement.classList.remove("show");
-      templeViewElement.classList.add("hide");
-      videoViewElement.classList.remove("hide");
-      videoViewElement.classList.add("show");
-      calendarViewElement.classList.remove("show");
-      calendarViewElement.classList.add("hide");
+      window.location.href = "./live.html";
+      // loadData(
+      //   showLiveDarshan,
+      //   "https://raw.githubusercontent.com/TempleGuru/templeteju/main/live",
+      //   "live"
+      // );
+      // currentView = "live";
+      // currentVideoNumber = 0;
+      // headerContainer.style.width = "0%";
+      // templeViewElement.classList.remove("show");
+      // templeViewElement.classList.add("hide");
+      // videoViewElement.classList.remove("hide");
+      // videoViewElement.classList.add("show");
+      // calendarViewElement.classList.remove("show");
+      // calendarViewElement.classList.add("hide");
     });
     audiosElement.addEventListener("click", function (event) {
       loadData(

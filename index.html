@@ -501,7 +501,7 @@
 
       //<iframe src= ${templesArray[i].videolink} width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       for (let i = 0; i == 0; i++) {
-        i = 3;
+        i = 8;
         let defaultimg = "images/default.png";
         templeHTML += `  
               <div class="video">
@@ -528,31 +528,35 @@
       }
       templeViewElement.insertAdjacentHTML("beforeend", templeHTML);
       caledarHTML = `<div id="basicInfo"  style="font-family: 'Timmana';" class="today">
-        శనివారం, 3 జులై 2021 
+        మంగళవారం, 6 జులై 2021
        
           <table align="center" class="table calendar-details table-sm t-xsmall">
 <tbody><tr>
 <td>తిథి   <span class="pull-right">:</span></td>
 <td>
-  కృష్ణపక్ష నవమి ( శనివారం, 3 జులై 2021, సాయంత్రం 5:30 వరకు - తదుపరి : కృష్ణపక్ష దశమి) </td>
+  కృష్ణపక్ష ద్వాదశి ( సోమవారం, 5 జులై 2021, రాత్రి 10:30 నుండి
+బుధవారం, 7 జులై 2021, రాత్రి 1:02 వరకు - తదుపరి : కృష్ణపక్ష త్రయోదశి ) </td>
 </tr>
 <tr>
 <td>నక్షత్రము  <span class="pull-right">:</span></td>
 <td>
-  రేవతి </td>
+  కృత్తిక </td>
 </tr>
 <tr>
 <td> రాహుకాలం <span class="pull-right">:</span></td>
 <td>
-  ఉదయం 8:50 నుండి మధ్యాహ్నం 10:29 వరకు</td>
+  మధ్యాహ్నం 3:24 నుండి సాయంత్రం 5:02 వరకు</td>
 </tr>
 <tr>
 <td>దుర్ముహుర్తము<span class="pull-right">:</span></td>
-<td>ఉదయం 5:34 నుండి ఉదయం 7:19 వరకు</td>
+<td>ఉదయం 8:12 నుండి ఉదయం 9:04 వరకు
+మళ్ళీ దుర్ముహుర్తము
+రాత్రి 11:55 నుండి రాత్రి 12:47 వరకు</td>
 </tr>
 <tr>
 <td>వర్జ్యం<span class="pull-right">:</span></td>
-<td>ఈ రోజు వర్జం లేదు</td>
+<td>వర్జం ఆరంభము మంగళవారం, 6 జులై 2021, ఉదయం 7:16 నుండి
+మంగళవారం, 6 జులై 2021, ఉదయం 9:04 వరకు</td>
 </tr>
 </tbody></table>
 
@@ -561,14 +565,15 @@
       templeViewElement.insertAdjacentHTML("beforeend", caledarHTML);
 
       liveDarshanHTML = `<div class="liveDarshan today" >
-            <div class="title">Bhagavad Gita latest from Way2News</div>
-            <div id="liveVideo">
-            <iframe width="853" height="480" src="https://www.youtube.com/embed/7d-N_ocSr9E?list=PL9-GB8jMeurKtLrONb6g_xt6UjjverSIH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-             </iframe>
-             </div>
-      
+        <div class="title"> LIVE DARSHAN FROM Shree Siddhivinayak Temple, Mumbai </div> 
+        <iframe width="683" height="384" src="https://www.youtube.com/embed/io066z1eMLA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+        <a href="./live.html"> Show more Live Darshans</a>      
             </div>`;
-
+      //   <div class="title">Shirdi Saibaba </div>
+      // <a
+      //   href="https://www.sai.org.in/en/sai-video-popup"
+      //   target="_blank"
+      // > Click here to visit live Shirdi Sai baba Darshan</a>
       templeViewElement.insertAdjacentHTML("beforeend", liveDarshanHTML);
 
       footerHTML = `<div class="footer today">
