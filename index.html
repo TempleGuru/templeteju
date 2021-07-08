@@ -24,11 +24,11 @@
         U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
         U+2212, U+2215, U+FEFF, U+FFFD;
     }
-    .astrology :not(.today){
+    .astrology :not(.today) {
       text-align: left;
       padding-bottom: 9px;
     }
-    .astroTitle{
+    .astroTitle {
       color: #ff9933;
     }
     div#liveVideo {
@@ -473,8 +473,8 @@
     let currentTempleId = 0;
     loadData(
       showTemples,
-      "https://raw.githubusercontent.com/TempleGuru/templeteju/main/temples",
-      "temples"
+      "https://raw.githubusercontent.com/TempleGuru/templeteju/main/home",
+      "home"
     );
     tabViewTitleMonthElement.innerHTML =
       MONTHS[currentMonth] + "," + currentYear;
@@ -501,14 +501,13 @@
       else if (currentView == "audios") showAudios(currentVideoNumber);
     });
     function showTemples() {
-      let templesArray = JSON.parse(JSON.parse(localStorage.getItem("temples")))
+      let templesArray = JSON.parse(JSON.parse(localStorage.getItem("home")))
         .temples;
       let templeViewElement = document.querySelector("#templeView");
       let templeHTML = "";
 
       //<iframe src= ${templesArray[i].videolink} width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       for (let i = 0; i == 0; i++) {
-        i = 8;
         let defaultimg = "images/default.png";
         templeHTML += `  
               <div class="video">
@@ -534,35 +533,43 @@
               </div>`;
       }
       templeViewElement.insertAdjacentHTML("beforeend", templeHTML);
-      caledarHTML = `
-      <div id="basicInfo"  class="astrology" style="font-family: 'Timmana';">
-        <div class="today"> మంగళవారం, 6 జులై 2021 </div>
-        <div> <span class="astroTitle">తిథి : </span> కృష్ణపక్ష ద్వాదశి ( సోమవారం, 5 జులై 2021, రాత్రి 10:30 నుండి
-                                బుధవారం, 7 జులై 2021, రాత్రి 1:02 వరకు - తదుపరి : కృష్ణపక్ష త్రయోదశి )
-        </div> 
-        <div><span class="astroTitle"> నక్షత్రము : </span>కృత్తిక </div>  
-        <div><span class="astroTitle"> రాహుకాలం : </span>మధ్యాహ్నం 3:24 నుండి సాయంత్రం 5:02 వరకు </div>
-        <div><span class="astroTitle"> దుర్ముహుర్తము : </span>ఉదయం 8:12 నుండి ఉదయం 9:04 వరకు 
-                          మళ్ళీ దుర్ముహుర్తము రాత్రి 11:55 నుండి రాత్రి 12:47 వరకు
-        </div>
-        <div><span class="astroTitle">వర్జ్యం : </span>వర్జం ఆరంభము మంగళవారం, 6 జులై 2021, ఉదయం 7:16 నుండి
-            మంగళవారం, 6 జులై 2021, ఉదయం 9:04 వరకు
-        </div>
 
-    </div>
-`;
+      todayArray = JSON.parse(JSON.parse(localStorage.getItem("home"))).today;
+      date = new Date();
+      caledarHTML = ``;
+      for (let i = 0; i < todayArray.length; i++) {
+        console.log(date.getDate()+"-"+ date.getMonth());
+        if (todayArray[i].date == date.getDate()+"-"+ (date.getMonth()+1) ) {
+          caledarHTML = `
+                <div id="basicInfo"  class="astrology" style="font-family: 'Timmana';">
+                  <div class="today"> ${todayArray[i].title} </div>
+                  <div> <span class="astroTitle">తిథి : </span> ${todayArray[i].thidhi}
+                  </div> 
+                  <div><span class="astroTitle"> నక్షత్రము : </span>${todayArray[i].nakshatram} </div>  
+                  <div><span class="astroTitle"> రాహుకాలం : </span>${todayArray[i].rahu}</div>
+                  <div><span class="astroTitle"> దుర్ముహుర్తము : </span>${todayArray[i].durmuhrtham} </div>
+                  <div><span class="astroTitle">వర్జ్యం : </span>${todayArray[i].varjam}</div>
+              </div>
+          `;
+        }
+      }
       templeViewElement.insertAdjacentHTML("beforeend", caledarHTML);
 
       liveDarshanHTML = `<div class="liveDarshan today" >
-        <div class="title"> LIVE DARSHAN FROM Shree Siddhivinayak Temple, Mumbai </div> 
-        <iframe width="683" height="384" src="https://www.youtube.com/embed/io066z1eMLA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+        <div class="title">Shirdi Saibaba </div>
+      <a
+        href="https://www.sai.org.in/en/sai-video-popup"
+        target="_blank"
+      > Click here to visit live Shirdi Sai baba Darshan</a>
+        <br/>
         <a href="./live.html"> Show more Live Darshans</a>      
             </div>`;
-      //   <div class="title">Shirdi Saibaba </div>
-      // <a
-      //   href="https://www.sai.org.in/en/sai-video-popup"
-      //   target="_blank"
-      // > Click here to visit live Shirdi Sai baba Darshan</a>
+      //     <div class="title"> LIVE DARSHAN FROM SOMNATH TEMPLE </div>
+      // <iframe width="663" height="373" src="https://www.youtube.com/embed/TVEqBYj7zfE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+      // <div class="title"> LIVE DARSHAN FROM Shree Siddhivinayak Temple, Mumbai </div>
+      // <iframe width="683" height="384" src="https://www.youtube.com/embed/io066z1eMLA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+
       templeViewElement.insertAdjacentHTML("beforeend", liveDarshanHTML);
 
       footerHTML = `<div class="footer today">
