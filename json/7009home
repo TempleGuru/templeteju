@@ -21,9 +21,9 @@
   ],
   "live": [
     {
-      "livetitle:": "SHIRDI SAIBABA LIVE DARSHAN , SHIRDI",
-      "iframelink": "https://www.sai.org.in/en/sai-video-popup",
-      "alink": true
+      "livetitle": "LIVE DARSHAN FROM Shree Siddhivinayak Temple, Mumbai",
+      "iframelink": "https://www.youtube.com/embed/io066z1eMLA",
+      "alink": false
     }
   ]
 }

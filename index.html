@@ -472,11 +472,12 @@
     let currentView = "home";
     let currentTempleId = 0;
     let currenDate = new Date().getDate();
-    let filename = ( (currentMonth+1) * 1000) + currenDate + "home";
+    let filename = (currentMonth + 1) * 1000 + currenDate + "home";
 
     loadData(
       showTemples,
-      "https://raw.githubusercontent.com/TempleGuru/templeteju/main/json/"+filename,
+      "https://raw.githubusercontent.com/TempleGuru/templeteju/main/json/" +
+        filename,
       "home"
     );
     tabViewTitleMonthElement.innerHTML =
@@ -513,21 +514,13 @@
         let defaultimg = "images/default.png";
         templeHTML += `  
               <div class="video">
-                <img class="moreThreeDots" loading="lazy" alt="${
-                  templesArray[i].templename
-                }" data-templeid=${templesArray[i].id} src="images/${templesArray[i].id}.png"/> 
+                <img class="moreThreeDots" loading="lazy" alt="${templesArray[i].templename}" data-templeid=${templesArray[i].id} src="images/${templesArray[i].id}.png"/> 
               </div>
               <div id="basicInfo">
-                <span class="title"> ${templesArray[i].templename} , ${
-          templesArray[i].location
-        } </span> 
-                <span class="moreThreeDots" data-templeid=${
-                  templesArray[i].id
-                }></span>
+                <span class="title"> ${templesArray[i].templename} , ${templesArray[i].location} </span> 
+                <span class="moreThreeDots" data-templeid=${templesArray[i].id}></span>
                 <span class="contacts"> ${templesArray[i].contacts} </span>
-                <span><a class="website" href=${
-                  templesArray[i].website
-                } target="_blank"> ${templesArray[i].website} <a> </span>
+                <span><a class="website" href=${templesArray[i].website} target="_blank"> ${templesArray[i].website} <a> </span>
                 <div class="more hide"></div>
                 <div><a href="./temples.html"> Show more temples</a></div>
               </div>`;
@@ -537,7 +530,7 @@
       todayArray = JSON.parse(JSON.parse(localStorage.getItem("home"))).today;
       caledarHTML = ``;
       for (let i = 0; i < todayArray.length; i++) {
-          caledarHTML = `
+        caledarHTML = `
                 <div id="basicInfo"  class="astrology" style="font-family: 'Timmana';">
                   <div class="today"> ${todayArray[i].title} </div>
                   <div> <span class="astroTitle">తిథి : </span> ${todayArray[i].thidhi}
@@ -551,18 +544,27 @@
       }
       templeViewElement.insertAdjacentHTML("beforeend", caledarHTML);
 
-      liveDarshanHTML = `<div class="liveDarshan today" >
-        <div class="title"> LIVE DARSHAN FROM Shree Siddhivinayak Temple, Mumbai </div>
-       <iframe width="683" height="384" src="https://www.youtube.com/embed/io066z1eMLA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+      liveArray = JSON.parse(JSON.parse(localStorage.getItem("home"))).live;
+      liveDarshanHTML = ``;
+      for (let i = 0; i < liveArray.length; i++) {
+        liveDarshanHTML = `<div class="liveDarshan today" >
+        <div class="title"> ${liveArray[i].livetitle} </div>`;
 
-        <br/>
+        if (liveArray[i].alink) {
+          liveDarshanHTML += ` <a
+        href="${liveArray[i].iframelink}"
+        target="_blank"
+      >`;
+        } else {
+          liveDarshanHTML += `<iframe width="683" height="384" src="${liveArray[i].iframelink}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>`;
+        }
+      }
+      liveDarshanHTML += `<br/>
         <a href="./live.html"> Show more Live Darshans</a>      
             </div>`;
+
       //       <div class="title">Shirdi Saibaba </div>
-      // <a
-      //   href="https://www.sai.org.in/en/sai-video-popup"
-      //   target="_blank"
-      // > Click here to visit live Shirdi Sai baba Darshan</a>
+      //  Click here to visit live Shirdi Sai baba Darshan</a>
 
       //     <div class="title"> LIVE DARSHAN FROM SOMNATH TEMPLE </div>
       // <iframe width="663" height="373" src="https://www.youtube.com/embed/TVEqBYj7zfE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
