@@ -1,29 +1,29 @@
 {
-    "temples":[
-        { 
-            "id" : "10", 
-            "templename" : "Kanakadurgamma Temple", 
-            "location": "Vijayawada,Krishna District", 
-            "videolink": "https://www.youtube.com/embed/EXo7J4QyHwo", 
-            "website": "https://kanakadurgamma.org/", 
-            "contacts": "1800 425 9099"
-        }
-    ],
-    "today": [
-      { 
-         "title": "శనివారం, 10 జులై 2021",
-          "thidhi": "శుక్లపక్ష పాడ్యమి ( శనివారం, 10 జులై 2021, ఉదయం 6:46 నుండి ఆదివారం, 11 జులై 2021, ఉదయం 7:47 వరకు ) ",
-          "nakshatram": "పునర్వసు",
-          "rahu": "ఉదయం 8:52 నుండి మధ్యాహ్నం 10:30 వరకు",
-          "durmuhrtham": "ఉదయం 5:36 నుండి ఉదయం 7:20 వరకు",
-          "varjam" :"వర్జం ఆరంభము శనివారం, 10 జులై 2021, సాయంత్రం 5:37 నుండి శనివారం, 10 జులై 2021, సాయంత్రం 7:20 వరకు"
-      }
-    ],
-    "live": [
-      {
-        "livetitle:": "SHIRDI SAIBABA LIVE DARSHAN , SHIRDI",
-        "iframelink": "https://www.sai.org.in/en/sai-video-popup",
-        "alink" : true
-      }
-    ]
+  "temples": [
+    {
+      "id": "10",
+      "templename": "Kanakadurgamma Temple",
+      "location": "Vijayawada,Krishna District",
+      "videolink": "https://www.youtube.com/embed/EXo7J4QyHwo",
+      "website": "https://kanakadurgamma.org/",
+      "contacts": "1800 425 9099"
+    }
+  ],
+  "today": [
+    {
+      "title": "శనివారం, 10 జులై 2021",
+      "thidhi": "శుక్లపక్ష పాడ్యమి ( శనివారం, 10 జులై 2021, ఉదయం 6:46 నుండి ఆదివారం, 11 జులై 2021, ఉదయం 7:47 వరకు ) ",
+      "nakshatram": "పునర్వసు",
+      "rahu": "ఉదయం 8:52 నుండి మధ్యాహ్నం 10:30 వరకు",
+      "durmuhrtham": "ఉదయం 5:36 నుండి ఉదయం 7:20 వరకు",
+      "varjam": "వర్జం ఆరంభము శనివారం, 10 జులై 2021, సాయంత్రం 5:37 నుండి శనివారం, 10 జులై 2021, సాయంత్రం 7:20 వరకు"
+    }
+  ],
+  "live": [
+    {
+      "livetitle:": "SHIRDI SAIBABA LIVE DARSHAN , SHIRDI",
+      "iframelink": "https://www.sai.org.in/en/sai-video-popup",
+      "alink": true
+    }
+  ]
 }

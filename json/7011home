@@ -1,29 +1,29 @@
 {
-    "temples":[
-        { 
-            "id" : "12", 
-            "templename" : "Sri Suryanarayana Swamy vari Devasthanam", 
-            "location": "Arasavalli, Srikakulam", 
-            "videolink": "https://www.youtube.com/embed/EXo7J4QyHwo", 
-            "website": "http://www.arasavallisungod.org/", 
-            "contacts": "08942-222421"
-        }
-    ],
-    "today": [
-      { 
+  "temples": [
+    {
+      "id": "12",
+      "templename": "Sri Suryanarayana Swamy vari Devasthanam",
+      "location": "Arasavalli, Srikakulam",
+      "videolink": "https://www.youtube.com/embed/EXo7J4QyHwo",
+      "website": "http://www.arasavallisungod.org/",
+      "contacts": "08942-222421"
+    }
+  ],
+  "today": [
+    {
       "title": "ఆదివారం, 11 జులై 2021",
       "thidhi": "శుక్లపక్ష విధియ ( ఆదివారం, 11 జులై 2021, ఉదయం 7:47 నుండి సోమవారం, 12 జులై 2021, ఉదయం 8:19 వరకుు - తదుపరి : శుక్లపక్ష తధియ )",
       "nakshatram": "పుష్యమి",
       "rahu": "సాయంత్రం 5:02 నుండి సాయంత్రం 6:40 వరకు",
       "durmuhrtham": "మధ్యాహ్నం 4:56 నుండి సాయంత్రం 5:48 వరకుు",
-      "varjam" : "వర్జం ఆరంభము ఆదివారం, 11 జులై 2021, మధ్యాహ్నం 2:58 నుండి ఆదివారం, 11 జులై 2021, మధ్యాహ్నం 4:39 వరకుు"
-      }
-    ],
-    "live": [
-      {
-        "livetitle:": "SHIRDI SAIBABA LIVE DARSHAN , SHIRDI",
-        "iframelink": "https://www.sai.org.in/en/sai-video-popup",
-        "alink" : true
-      }
-    ]
+      "varjam": "వర్జం ఆరంభము ఆదివారం, 11 జులై 2021, మధ్యాహ్నం 2:58 నుండి ఆదివారం, 11 జులై 2021, మధ్యాహ్నం 4:39 వరకుు"
+    }
+  ],
+  "live": [
+    {
+      "livetitle:": "SHIRDI SAIBABA LIVE DARSHAN , SHIRDI",
+      "iframelink": "https://www.sai.org.in/en/sai-video-popup",
+      "alink": true
+    }
+  ]
 }

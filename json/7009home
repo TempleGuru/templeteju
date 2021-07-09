@@ -1,29 +1,29 @@
 {
-    "temples":[
-        { 
-            "id" : "10", 
-            "templename" : "Kanakadurgamma Temple", 
-            "location": "Vijayawada,Krishna District", 
-            "videolink": "https://www.youtube.com/embed/EXo7J4QyHwo", 
-            "website": "https://kanakadurgamma.org/", 
-            "contacts": "1800 425 9099"
-        }
-    ],
-    "today": [
-      { 
-           "title": "శుక్రవారం, 9 జులై 2021",
-          "thidhi": "అమావాస్య ( శుక్రవారం, 9 జులై 2021, ఉదయం 5:16 నుండి శనివారం, 10 జులై 2021, ఉదయం 6:46 వరకు - తదుపరి : శుక్లపక్ష పాడ్యమి ) ",
-          "nakshatram": "ఆర్ద్ర",
-          "rahu": "మధ్యాహ్నం 10:30 నుండి మధ్యాహ్నం 12:08 వరకు",
-          "durmuhrtham": "ఉదయం 8:13 నుండి ఉదయం 9:05 వరకు మళ్ళీ దుర్ముహుర్తము మధ్యాహ్నం 12:34 నుండి మధ్యాహ్నం 1:26 వరకు",
-          "varjam" : "వర్జం ఆరంభము శుక్రవారం, 9 జులై 2021, మధ్యాహ్నం 11:39 నుండి శుక్రవారం, 9 జులై 2021, మధ్యాహ్నం 1:24 వరకు"
-      }
-    ],
-    "live": [
-      {
-        "livetitle:": "SHIRDI SAIBABA LIVE DARSHAN , SHIRDI",
-        "iframelink": "https://www.sai.org.in/en/sai-video-popup",
-        "alink" : true
-      }
-    ]
+  "temples": [
+    {
+      "id": "10",
+      "templename": "Kanakadurgamma Temple",
+      "location": "Vijayawada,Krishna District",
+      "videolink": "https://www.youtube.com/embed/EXo7J4QyHwo",
+      "website": "https://kanakadurgamma.org/",
+      "contacts": "1800 425 9099"
+    }
+  ],
+  "today": [
+    {
+      "title": "శుక్రవారం, 9 జులై 2021",
+      "thidhi": "అమావాస్య ( శుక్రవారం, 9 జులై 2021, ఉదయం 5:16 నుండి శనివారం, 10 జులై 2021, ఉదయం 6:46 వరకు - తదుపరి : శుక్లపక్ష పాడ్యమి ) ",
+      "nakshatram": "ఆర్ద్ర",
+      "rahu": "మధ్యాహ్నం 10:30 నుండి మధ్యాహ్నం 12:08 వరకు",
+      "durmuhrtham": "ఉదయం 8:13 నుండి ఉదయం 9:05 వరకు మళ్ళీ దుర్ముహుర్తము మధ్యాహ్నం 12:34 నుండి మధ్యాహ్నం 1:26 వరకు",
+      "varjam": "వర్జం ఆరంభము శుక్రవారం, 9 జులై 2021, మధ్యాహ్నం 11:39 నుండి శుక్రవారం, 9 జులై 2021, మధ్యాహ్నం 1:24 వరకు"
+    }
+  ],
+  "live": [
+    {
+      "livetitle:": "SHIRDI SAIBABA LIVE DARSHAN , SHIRDI",
+      "iframelink": "https://www.sai.org.in/en/sai-video-popup",
+      "alink": true
+    }
+  ]
 }

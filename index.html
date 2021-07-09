@@ -509,7 +509,6 @@
       let templeViewElement = document.querySelector("#templeView");
       let templeHTML = "";
 
-      //<iframe src= ${templesArray[i].videolink} width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       for (let i = 0; i == 0; i++) {
         let defaultimg = "images/default.png";
         templeHTML += `  
@@ -536,11 +535,8 @@
       templeViewElement.insertAdjacentHTML("beforeend", templeHTML);
 
       todayArray = JSON.parse(JSON.parse(localStorage.getItem("home"))).today;
-      date = new Date();
       caledarHTML = ``;
       for (let i = 0; i < todayArray.length; i++) {
-        console.log(date.getDate()+"-"+ date.getMonth());
-        if (todayArray[i].date == date.getDate()+"-"+ (date.getMonth()+1) ) {
           caledarHTML = `
                 <div id="basicInfo"  class="astrology" style="font-family: 'Timmana';">
                   <div class="today"> ${todayArray[i].title} </div>
@@ -552,7 +548,6 @@
                   <div><span class="astroTitle">వర్జ్యం : </span>${todayArray[i].varjam}</div>
               </div>
           `;
-        }
       }
       templeViewElement.insertAdjacentHTML("beforeend", caledarHTML);
 
