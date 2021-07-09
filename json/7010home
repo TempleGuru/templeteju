@@ -15,9 +15,9 @@
   ],
   "live": [
     {
-      "livetitle": "SHIRDI SAIBABA LIVE DARSHAN , SHIRDI",
-      "iframelink": "https://www.sai.org.in/en/sai-video-popup",
-      "alink": true
+      "livetitle": "Live Darshan from Dwarkadhish Temple, Dwarka, Gujarat",
+      "iframelink": "https://apigw.jio.ril.com/jioplayer/?url=https://cdndp.cdn.jio.com/packagerx/Dwarkadhish_HLS/Dwarkadhish.m3u8",
+      "alink": false
     }
   ]
 }
