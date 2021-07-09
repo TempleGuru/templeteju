@@ -471,9 +471,12 @@
     let currentVideoNumber = 0;
     let currentView = "home";
     let currentTempleId = 0;
+    let currenDate = new Date().getDate();
+    let filename = ( (currentMonth+1) * 1000) + currenDate + "home";
+
     loadData(
       showTemples,
-      "https://raw.githubusercontent.com/TempleGuru/templeteju/main/home",
+      "https://raw.githubusercontent.com/TempleGuru/templeteju/main/json/"+filename,
       "home"
     );
     tabViewTitleMonthElement.innerHTML =
