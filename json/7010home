@@ -15,9 +15,16 @@
   ],
   "live": [
     {
+      "livetitle": "Live Darshan from Sri Sri Krishna Balaram Mandir, Vrindavan, Uttar Pradesh",
+      "iframelink": "https://iskconvrindavan.com/live-darshan/",
+      "alink": true
+    }
+  ],
+  "livebackup": [
+    {
       "livetitle": "Live Darshan from Shree Mahakaleshwar Temple, Ujjain, MP",
       "iframelink": "https://www.youtube.com/embed/eg19gAYEfU4",
       "alink": false
     }
-  ]
+  ] 
 }
