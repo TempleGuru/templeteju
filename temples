@@ -96,6 +96,14 @@
     "videolink": "https://www.youtube.com/embed/EXo7J4QyHwo", 
     "website": "https://srikalahasthitemple.com/", 
     "contacts": "08942-222421"
+},
+ { 
+    "id" : "14", 
+    "templename" : "Sri Venkateswara swamy Temple", 
+    "location": "Vadapalli, East Godavari District", 
+    "videolink": "https://www.youtube.com/embed/4j9HceGbK18", 
+    "website": "https://vsvstemple.com/", 
+    "contacts": "08855 271888"
 }
   ]
 }
