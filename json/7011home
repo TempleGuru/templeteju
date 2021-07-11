@@ -21,9 +21,9 @@
   ],
   "live": [
     {
-      "livetitle": "SHIRDI SAIBABA LIVE DARSHAN , SHIRDI",
-      "iframelink": "https://www.sai.org.in/en/sai-video-popup",
-      "alink": true
+      "livetitle": "Live Darshan from Sri Sri Krishna Balaram Mandir, Vrindavan, Uttar Pradesh",
+      "iframelink": "https://www.youtube.com/embed/Otx3FASPkbY",
+      "alink": false
     }
   ]
 }

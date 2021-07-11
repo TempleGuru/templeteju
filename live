@@ -23,5 +23,22 @@
         "link": "https://www.mahalaxmikolhapur.com/shri-ambabai-mahalaxmi-live-darshan.php", 
         "message":"Shri Mahalaxmi, Kolhapur,"
       }
+  ],
+  "liveDarshan":[
+    {
+      "livetitle": "SHIRDI SAIBABA LIVE DARSHAN , SHIRDI",
+      "iframelink": "https://www.sai.org.in/en/sai-video-popup",
+      "alink": true
+    },
+    {
+      "livetitle": "Live Darshan from Shree Mahakaleshwar Temple, Ujjain, MP",
+      "iframelink": "https://www.youtube.com/embed/eg19gAYEfU4",
+      "alink": false
+    },
+    {
+      "livetitle": "Live Darshan from Sri Sri Krishna Balaram Mandir, Vrindavan, Uttar Pradesh",
+      "iframelink": "https://iskconvrindavan.com/live-darshan/",
+      "alink": true
+    }
   ]
 }
