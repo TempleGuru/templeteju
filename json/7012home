@@ -1,0 +1,30 @@
+{
+  "temples": [
+    { 
+      "id" : "5", 
+      "templename" : "Sri  Ksheera Ramalingeswara Swamy Temple", 
+      "location": "Palakollu", 
+      "videolink": "https://www.youtube.com/embed/G6PjvMVYm1o", 
+      "website": "https://tms.ap.gov.in/KRLPKL/cnt/index", 
+      "contacts": "+91 9974564654",
+      "image": ""
+    }
+  ],
+  "today": [
+    {
+      "title": "సోమవారం, 12 జులై 2021",
+      "thidhi": "శుక్లపక్ష తధియ ( సోమవారం, 12 జులై 2021, ఉదయం 8:19 నుండి మంగళవారం, 13 జులై 2021, ఉదయం 8:24 వరకు - తదుపరి : శుక్లపక్ష చవితి )",
+      "nakshatram": "ఆశ్లేష",
+      "rahu": "ఉదయం 7:15 నుండి ఉదయం 8:52 వరకు",
+      "durmuhrtham": "మధ్యాహ్నం 12:35 నుండి మధ్యాహ్నం 1:27 వరకు మళ్ళీ దుర్ముహుర్తము మధ్యాహ్నం 3:11 నుండి మధ్యాహ్నం 4:04 వరకుుు",
+      "varjam": "వర్జం ఆరంభము సోమవారం, 12 జులై 2021, రాత్రి 9:07 నుండి సోమవారం, 12 జులై 2021, రాత్రి 10:47 వరకుుు"
+    }
+  ],
+  "live": [
+    {
+      "livetitle": "Live Darshan from Shree Somnath Temple, First Jyotirlinga, Gujarat",
+      "iframelink": "https://www.youtube.com/embed/DOdvVipX07o",
+      "alink": false
+    }
+  ]
+}
