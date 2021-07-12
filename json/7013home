@@ -1,0 +1,29 @@
+{
+  "temples": [
+    { 
+      "id" : "7", 
+      "templename" : "SRI CHALUKYA KUMARARAMA SRI BHIMESWARASWAMY VARI TEMPLE", 
+      "location": "Samalkot", 
+      "videolink": "https://www.youtube.com/embed/EXo7J4QyHwo", 
+      "website": "https://eastgodavari.ap.gov.in/tourism/temples/sri-chalukya-kumararama-sri-bhimeswaraswamy-vari-temple-samalkot/", 
+      "contacts": "--"
+   }
+  ],
+  "today": [
+    {
+      "title": "మంగళవారం, 13 జులై 2021",
+      "thidhi": "శుక్లపక్ష చవితి ( మంగళవారం, 13 జులై 2021, ఉదయం 8:24 నుండి బుధవారం, 14 జులై 2021, ఉదయం 8:02 వరకుు - తదుపరి : శుక్లపక్ష పంచమి )",
+      "nakshatram": "మఖ",
+      "rahu": "మధ్యాహ్నం 3:24 నుండి సాయంత్రం 5:02 వరకుు",
+      "durmuhrtham": "ఉదయం 8:14 నుండి ఉదయం 9:06 వరకు మళ్ళీ దుర్ముహుర్తము రాత్రి 11:54 నుండి రాత్రి 12:46 వరకుుుు",
+      "varjam": "వర్జం ఆరంభము మంగళవారం, 13 జులై 2021, రాత్రి 8:57 నుండి మంగళవారం, 13 జులై 2021, రాత్రి 10:35 వరకుుుు"
+    }
+  ],
+  "live": [
+    {
+      "livetitle": "Live from Shree KasthBhanjandev Hanumanji Mandir, Salangpur,Gujarat",
+      "iframelink": "https://www.youtube.com/embed/6qBZjJfoccU",
+      "alink": false
+    }
+  ]
+}
