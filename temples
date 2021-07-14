@@ -1,9 +1,21 @@
 {
   "temples" : 
   [
-    { "id" : "1", "templename" : "Sri Venkateswara Swamy Temple", "location": "Tirumala", "videolink": "https://www.youtube.com/embed/J8gKJ_OKN6Y", "website": " https://www.tirumala.org/", "contacts": "1800 425 4141, 0877 227 7777", 
-      "image": "https://lh3.google.com/u/0/d/1erzWtZlKjxpTp6r-KiwZMhxIOaXVyz_k=w1366-h599-iv1" },
-    { "id" : "2", "templename" : "Andhra Shirdi Sainath Temple", "location": "East Godavari District", "videolink": "https://www.youtube.com/embed/DrJ2KVBvNC0", "website": " http://www.andhrashirdi.org/", "contacts": "98496 66377,  08857 - 236114",
+    { "id" : "1", 
+      "templename" : "Sri Venkateswara Swamy Temple", 
+      "location": "Tirumala", 
+      "videolink": "https://www.youtube.com/embed/J8gKJ_OKN6Y", 
+      "website": " https://www.tirumala.org/", 
+      "contacts": "1800 425 4141, 0877 227 7777", 
+      "image": "https://lh3.google.com/u/0/d/1erzWtZlKjxpTp6r-KiwZMhxIOaXVyz_k=w1366-h599-iv1" 
+    },
+    { 
+      "id" : "2",
+      "templename" : "Andhra Shirdi Sainath Temple", 
+      "location": "East Godavari District", 
+      "videolink": "https://www.youtube.com/embed/DrJ2KVBvNC0", 
+      "website": " http://www.andhrashirdi.org/", 
+      "contacts": "98496 66377,  08857 - 236114",
       "image": "https://lh3.googleusercontent.com/BA5sJ1g0_HHZWHsHusTs-3YpYQEVlHY9eofk54eB7BnWIOwBAg_gRLfTds8GRvwcemlM1XT8kd_cTXZAsuKnp5Qhxb__KMqjQkMBzVnuGwdXCiON2V6c4iIfKPh62SNJJ3hrnfHqG2jcnUM00yECmTWB91dq5g35KNY5P8Ei4RsUyp__-MC3qYsyEEZfGS-JpR6xfZgOIQTMkZyNk-Ie3I_twefapVmBcDRKgl8v6ZGORu1aHCR0-ub9Lr92XvJkJkzf0881Qpi1yirvbvywjN5u6tTReyLWa2V1qdWCrmgMCl97ecuXkFpnfue7aapz0ZurGk9vCc6WbcmDsMUcCPLSF1_vjHn3NezpkKsg6TD9JzKCDLJlQAbx1YV35BfUtkkabz3tUf0cOBFMAXcGhH7ZOU8Qt6vUTs5I42QZ6rR_krzXo2Pz6xzmBM9JiaUV4PuuUzsoKxAtN2SauNT33cKmvVn7vTAzEvl0intr3ab2Kx24ExRxUeoHFHlMLgw-xhbFJPl7l1K8PCWFZhrf73fFz6UtiFrBSAsycm18_rD1gORnc80X9-VKkYD6mISeyaUQei9Gf4bK2QrDnmg0e6CJGM9-Megtg8LF1jcGkSfemjsTua1Blpmeih7C1r1aUAiZHvrHfl8CuYc3jKcrhiaUNyODoEY4TdFWk38ok2VSUsy6sDMEoI9-=w220-h209-no?authuser=0"},
     { 
       "id" : "3", 
