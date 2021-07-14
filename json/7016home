@@ -1,0 +1,29 @@
+{
+  "temples": [
+    { 
+      "id" : "10", 
+      "templename" : "Kanakadurgamma Temple", 
+      "location": "Vijayawada,Krishna District", 
+      "videolink": "https://www.youtube.com/embed/EXo7J4QyHwo", 
+      "website": "https://kanakadurgamma.org/", 
+      "contacts": "1800 425 9099"
+    }
+  ],
+  "today": [
+    {
+      "title": "శుక్రవారం, 16 జులై 2021", 
+      "thidhi": "శుక్లపక్ష సప్తమి ( శుక్రవారం, 16 జులై 2021, ఉదయం 6:06 నుండి శనివారం, 17 జులై 2021, ఉదయం 4:34 వరకు - తదుపరి : శుక్లపక్ష అష్టమి )",
+      "nakshatram": "హస్త",
+      "rahu": "మధ్యాహ్నం 10:31 నుండి మధ్యాహ్నం 12:09 వరకు",
+      "durmuhrtham": "ఉదయం 8:14 నుండి ఉదయం 9:06 వరకు మళ్ళీ దుర్ముహుర్తము మధ్యాహ్నం 12:35 నుండి మధ్యాహ్నం 1:27 వరకు",
+      "varjam": "వర్జం ఆరంభము శుక్రవారం, 16 జులై 2021, మధ్యాహ్నం 4:59 నుండి శుక్రవారం, 16 జులై 2021, సాయంత్రం 6:32 వరకు"
+    }
+  ],
+  "live": [
+    {
+      "livetitle": "LIVE DARSHAN-Shri Ambabai/Mahalaxmi, Kolhapur, Maharashtra",
+      "iframelink": "https://www.mahalaxmikolhapur.com/shri-ambabai-mahalaxmi-live-darshan.php",
+      "alink": true
+    }
+  ]
+}
