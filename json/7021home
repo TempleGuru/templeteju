@@ -1,0 +1,29 @@
+{
+  "temples": [
+    { 
+      "id" : "9", 
+      "templename" : "Sri Swayambu Varasidhi Vinayakaswamy Temple", 
+      "location": "Kanipakam,Chittoor", 
+      "videolink": "https://www.youtube.com/embed/EXo7J4QyHwo", 
+      "website": "http://www.kanipakam.com/home.html", 
+      "contacts": "08573-281540, 08573-281747,08573-281112"
+    }
+  ],
+  "today": [
+    {
+      "title": "బుధవారం, 21 జులై 2021", 
+      "thidhi": "శుక్లపక్ష ద్వాదశి ( మంగళవారం, 20 జులై 2021, సాయంత్రం 7:17 నుండి బుధవారం, 21 జులై 2021, మధ్యాహ్నం 4:26 వరకు - తదుపరి : శుక్లపక్ష త్రయోదశి )",
+      "nakshatram": "జ్యేష్ట",
+      "rahu": "మధ్యాహ్నం 12:09 నుండి మధ్యాహ్నం 1:47 వరకు",
+      "durmuhrtham": "మధ్యాహ్నం 11:43 నుండి మధ్యాహ్నం 12:35 వరకు",
+      "varjam": "వర్జం ఆరంభము బుధవారం, 21 జులై 2021, ఉదయం 7:09 నుండి బుధవారం, 21 జులై 2021, ఉదయం 8:37 వరకు"
+    }
+  ],
+  "live": [
+    {
+      "livetitle": "Live Darshan from Shree Mahakaleshwar Temple, Ujjain, MP",
+      "iframelink": "https://www.youtube.com/embed/Do280FK_2-w",
+      "alink": false
+    }
+  ]
+}
