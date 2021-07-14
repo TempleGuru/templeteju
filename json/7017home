@@ -1,0 +1,29 @@
+{
+  "temples": [
+    { 
+      "id" : "14", 
+      "templename" : "Sri Venkateswara swamy Temple", 
+      "location": "Vadapalli, East Godavari District", 
+      "videolink": "https://www.youtube.com/embed/4j9HceGbK18", 
+      "website": "https://vsvstemple.com/", 
+      "contacts": "08855 271888"
+  }
+  ],
+  "today": [
+    {
+      "title": "శనివారం, 17 జులై 2021", 
+      "thidhi": "శుక్లపక్ష అష్టమి ( శనివారం, 17 జులై 2021, ఉదయం 4:34 నుండి ఆదివారం, 18 జులై 2021, రాత్రి 2:41 వరకు - తదుపరి : శుక్లపక్ష నవమి )",
+      "nakshatram": "చిత్త",
+      "rahu": "ఉదయం 8:54 నుండి మధ్యాహ్నం 10:31 వరకు",
+      "durmuhrtham": "ఉదయం 5:38 నుండి ఉదయం 7:22 వరకు",
+      "varjam": "వర్జం ఆరంభము శనివారం, 17 జులై 2021, మధ్యాహ్నం 3:45 నుండి శనివారం, 17 జులై 2021, సాయంత్రం 5:17 వరకు"
+    }
+  ],
+  "live": [
+    {
+      "livetitle": "Live Darshan from Sri Sri Krishna Balaram Mandir, Vrindavan, Uttar Pradesh",
+      "iframelink": "https://iskconvrindavan.com/live-darshan/",
+      "alink": true
+    }
+  ]
+}
