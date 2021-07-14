@@ -1,0 +1,29 @@
+{
+  "temples": [
+    { 
+      "id" : "11", 
+      "templename" : "Simhachalam Devasthanam", 
+      "location": "Simhachalam, Visakhapatnam", 
+      "videolink": "https://www.youtube.com/embed/EXo7J4QyHwo", 
+      "website": "http://simhachalamdevasthanam.net/home.html", 
+      "contacts": "0891-2979666, 0891-2764949, 0891-2715435"
+  }
+  ],
+  "today": [
+    {
+      "title": "మంగళవారం, 20 జులై 2021", 
+      "thidhi": "శుక్లపక్ష ఏకాదశి ( సోమవారం, 19 జులై 2021, రాత్రి 10:00 నుండి మంగళవారం, 20 జులై 2021, సాయంత్రం 7:17 వరకు - తదుపరి : శుక్లపక్ష ద్వాదశి )",
+      "nakshatram": "అనూరాధ",
+      "rahu": "మధ్యాహ్నం 3:24 నుండి సాయంత్రం 5:02 వరకు",
+      "durmuhrtham": "ఉదయం 8:15 నుండి ఉదయం 9:07 వరకు మళ్ళీ దుర్ముహుర్తము రాత్రి 11:51 నుండి రాత్రి 12:43 వరకు",
+      "varjam": "వర్జం ఆరంభము మంగళవారం, 20 జులై 2021, ఉదయం 7:37 నుండి మంగళవారం, 20 జులై 2021, ఉదయం 9:06 వరకు"
+    }
+  ],
+  "live": [
+    {
+      "livetitle": "LIVE DARSHAN-Shri Ambabai/Mahalaxmi, Kolhapur, Maharashtra",
+      "iframelink": "https://www.mahalaxmikolhapur.com/shri-ambabai-mahalaxmi-live-darshan.php",
+      "alink": true
+    },
+  ]
+}
